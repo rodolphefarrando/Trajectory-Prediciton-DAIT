@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --workdir /home/<put-your-username-here>
+#SBATCH --workdir /home/farrando
 #SBATCH --nodes 1
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 1
