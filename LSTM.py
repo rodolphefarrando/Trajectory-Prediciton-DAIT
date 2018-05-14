@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+import torch.nn.functional as F
 from torch.autograd import Variable
 import torchvision.datasets as dsets
 import torchvision.transforms as transforms
@@ -28,3 +29,8 @@ class LSTM(nn.Module):
         # choose r_out at the last time step
         out = self.out(r_out)
         return out
+
+
+    def predict(self,x):
+        x = self.forward(x)
+        return x
