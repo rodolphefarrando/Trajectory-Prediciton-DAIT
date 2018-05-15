@@ -9,7 +9,7 @@ class LSTM(nn.Module):
     def __init__(self,input_size):
         super(LSTM, self).__init__()
 
-        hidden_size = 128
+        hidden_size = 256
         self.rnn = nn.LSTM(         # if use nn.RNN(), it hardly learns
             input_size=input_size,
             hidden_size=hidden_size,         # rnn hidden unit
@@ -17,7 +17,9 @@ class LSTM(nn.Module):
             batch_first=True,       # input & output will has batch size as 1s dimension. e.g. (batch, time_step, input_size)
         )
 
-        self.out = nn.Linear(hidden_size, 2)
+        self.out = nn.Linear(hidden_size, 128)
+        self.out = nn.Linear(128, 20)
+        self.out = nn.Linear(20, 2)
 
     def forward(self, x):
         # x shape (batch, time_step, input_size)
