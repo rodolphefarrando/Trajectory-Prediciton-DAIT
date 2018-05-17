@@ -21,7 +21,6 @@ class Training:
     def dataAugmentation(self):
         """
 
-        :param i: i is an index from 0 to number_traj and goes into unique_id to find the id
         :return: Create a new trajectory with noise.
         """
         new_data = self.data.copy()
@@ -48,6 +47,17 @@ class Training:
         name = 'aug_'+self.name
         np.savetxt(r'../new_data/{}/{}'.format(self.fold,name),new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
 
+    def flip(self):
+        """
+
+        :return: flip the traj
+        """
+        new_data = self.data.copy()
+        new_data['x']=-new_data['x']
+        new_data['Vx'] = -new_data['Vx']
+        name = 'flip'+self.name
+        np.savetxt(r'../new_data/{}/{}'.format(self.fold, name), new_data.values,
+                   fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
 
     def traj_plot(self):
 
