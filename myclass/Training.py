@@ -45,7 +45,7 @@ class Training:
             new_data.loc[ind[1:], 'Vx'] = speed_x
             new_data.loc[ind[1:], 'Vy'] = speed_y
         name = 'aug_'+self.name
-        np.savetxt(r'../new_data/{}/{}'.format(self.fold,name),new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+        np.savetxt(r'../data_linear_augm/{}/{}'.format(self.fold,name),new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
 
     def flip(self):
         """
@@ -56,8 +56,8 @@ class Training:
         new_data['x']=-new_data['x']
         new_data['Vx'] = -new_data['Vx']
         name = 'flip'+self.name
-        np.savetxt(r'../new_data/{}/{}'.format(self.fold, name), new_data.values,
-                   fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+        np.savetxt(r'../data_linear_augm/{}/{}'.format(self.fold, name), new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+
 
     def traj_plot(self):
 
