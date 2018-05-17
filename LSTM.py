@@ -7,11 +7,11 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 
 class LSTM(nn.Module):
-    def __init__(self):
+    def __init__(self,input_size):
         super(LSTM, self).__init__()
         hidden_size = 64
         self.rnn = nn.LSTM(         # if use nn.RNN(), it hardly learns
-            input_size=4,
+            input_size=input_size,
             hidden_size=hidden_size,         # rnn hidden unit
 
             num_layers=2,           # number of rnn layer
@@ -31,11 +31,13 @@ class LSTM(nn.Module):
 
         # choose r_out at the last time step
         out = self.out(r_out)
-        for i in range(10):
-            if i == 0:
-                out[i, :, 0:1] = x[-1, :, 0:1] + out[i, :, 2:3]
-            else:
-                out[i, :, 0:1] = out[i - 1, :, 0:1] + out[i, :, 2:3]
+        #for i in range(10):
+        #    if i == 0:
+        #        #out[i,:,0] = x[-1, :, 0]+10
+        #        out[i, :, 0:2] = x[-1, :, 0:2] + out[i, :, 2:]*0.4
+        #    else:
+        #        #out[i, :, 0] = out[i-1, :, 0] + 10
+        #        out[i, :, 0:2] = out[i - 1, :, 0:2] + out[i, :, 2#:]*0.4
         return out
 
 
