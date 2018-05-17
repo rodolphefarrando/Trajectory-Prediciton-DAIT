@@ -24,15 +24,16 @@ class Training:
         :return: Create a new trajectory with noise.
         """
         new_data = self.data.copy()
-        noise_x = np.random.rand(19) / 10
-        noise_y = np.sort(np.random.rand(19) / 10)
-        new_data.loc[1:19, 'x'] += noise_x
-        new_data.loc[1:19, 'y'] += noise_y
+        noise_x = np.random.rand(19) / 20
+        noise_y = np.random.rand(19) / 20
+        for i in range(np.int(len(self.data)/20)):
+            new_data.loc[20*i+1:20*(i+1)-1, 'x'] += noise_x
+            new_data.loc[20*i+1:20*(i+1)-1, 'y'] += noise_y
         new_data['Vx'] = np.zeros(len(self.data))
         new_data['Vy'] = np.zeros(len(self.data))
         unique_id = np.unique(np.array(self.data['id']))
         for i in unique_id:
-            a = self.data[self.data['id'] == i]
+            a = new_data[new_data['id'] == i]
             ind = a.index
             a.index = range(len(a))
             dist1 = a.loc[0:len(a) - 2, 'x':'y']
@@ -45,7 +46,8 @@ class Training:
             new_data.loc[ind[1:], 'Vx'] = speed_x
             new_data.loc[ind[1:], 'Vy'] = speed_y
         name = 'aug_'+self.name
-        np.savetxt(r'../data_linear_augm/{}/{}'.format(self.fold,name),new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+        np.savetxt(r'./data_linear_augm/{}/{}'.format(self.fold,name),new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+        #return new_data
 
     def flip(self):
         """
@@ -56,7 +58,7 @@ class Training:
         new_data['x']=-new_data['x']
         new_data['Vx'] = -new_data['Vx']
         name = 'flip'+self.name
-        np.savetxt(r'../data_linear_augm/{}/{}'.format(self.fold, name), new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
+        np.savetxt(r'./data_linear_augm/{}/{}'.format(self.fold, name), new_data.values,fmt=['%d', '%d', '%.8f', '%.8f', '%.8f', '%.8f'])
 
 
     def traj_plot(self):
@@ -71,5 +73,5 @@ class Training:
         for i in range(nb):
             plt.plot(self.data.loc[20*i:20*(i+1)-1,'x'], self.data.loc[20*i:20*(i+1)-1,'y'])
 
-        plt.axis([-5.5, 5.5, -1, 10])
+        plt.axis([-5.5, 5.5, -1, 15])
         #plt.savefig(r'../figure/{}.pdf'.format(self.name), bbox_inches='tight')
