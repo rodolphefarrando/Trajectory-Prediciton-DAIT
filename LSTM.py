@@ -7,20 +7,17 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 
 class LSTM(nn.Module):
-    def __init__(self,input_size):
+    def __init__(self,input_size,output_size,num_layers = 1,hidden_size = 64):
         super(LSTM, self).__init__()
-        hidden_size = 64
         self.rnn = nn.LSTM(         # if use nn.RNN(), it hardly learns
             input_size=input_size,
             hidden_size=hidden_size,         # rnn hidden unit
 
-            num_layers=2,           # number of rnn layer
+            num_layers=num_layers,           # number of rnn layer
             batch_first=True,       # input & output will has batch size as 1s dimension. e.g. (batch, time_step, input_size)
         )
 
-        self.out = nn.Linear(hidden_size, 4)
-        #self.out = nn.Linear(128, 20)
-        #self.out = nn.Linear(20, 2)
+        self.out = nn.Linear(hidden_size, output_size)
 
     def forward(self, x):
         # x shape (batch, time_step, input_size)
@@ -31,13 +28,7 @@ class LSTM(nn.Module):
 
         # choose r_out at the last time step
         out = self.out(r_out)
-        #for i in range(10):
-        #    if i == 0:
-        #        #out[i,:,0] = x[-1, :, 0]+10
-        #        out[i, :, 0:2] = x[-1, :, 0:2] + out[i, :, 2:]*0.4
-        #    else:
-        #        #out[i, :, 0] = out[i-1, :, 0] + 10
-        #        out[i, :, 0:2] = out[i - 1, :, 0:2] + out[i, :, 2#:]*0.4
+
         return out
 
 
