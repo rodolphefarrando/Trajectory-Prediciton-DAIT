@@ -15,7 +15,7 @@ import pdb
 
 torch.manual_seed(1)
 
-class ConvNet(nn.Module):
+class CNN2D(nn.Module):
     def __init__(self, n_input_channels=1, n_output=None):
         super().__init__()
               
