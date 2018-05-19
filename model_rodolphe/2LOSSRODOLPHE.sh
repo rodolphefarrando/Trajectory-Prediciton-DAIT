@@ -9,7 +9,7 @@
 #SBATCH --qos gpu_free
 #SBATCH --account civil-459
 #SBATCH --reservation civil-459-project
-
+#SBATCH --time 12:00:00
 
 module load gcc python cuda
 source ~/venv/pytorch/bin/activate
