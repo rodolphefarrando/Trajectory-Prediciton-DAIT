@@ -8,10 +8,10 @@ from torch import optim
 torch.manual_seed(1)
 
 
-gt_train_coord = pickle.load( open( "../import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
-gt_train  = pickle.load( open( "../import_dataset_2/train/gt_train.pkl", "rb" ) )
-in_train_coord  = pickle.load( open( "../import_dataset_2/train/in_train_coord.pkl", "rb" ) )
-inputs_train = pickle.load( open( "../import_dataset_2/train/inputs_train.pkl", "rb" ) )
+gt_train_coord = pickle.load( open( "./import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
+gt_train  = pickle.load( open( "./import_dataset_2/train/gt_train.pkl", "rb" ) )
+in_train_coord  = pickle.load( open( "./import_dataset_2/train/in_train_coord.pkl", "rb" ) )
+inputs_train = pickle.load( open( "./import_dataset_2/train/inputs_train.pkl", "rb" ) )
 
 coord_ind = np.append(np.arange(0,2),np.arange(4,164))
 inputs_train = inputs_train[:,:,coord_ind]
@@ -21,10 +21,10 @@ inputs_train = torch.from_numpy(inputs_train).float()
 gt_train = torch.from_numpy(gt_train).float()
 
 
-gt_validation_coord = pickle.load( open( "../import_dataset_2/validation/gt_validation_coord.pkl", "rb" ) )
-gt_validation = pickle.load( open( "../import_dataset_2/validation/gt_validation.pkl", "rb" ) )
-in_validation_coord = pickle.load( open( "../import_dataset_2/validation/in_validation_coord.pkl", "rb" ) )
-inputs_validation = pickle.load( open( "../import_dataset_2/validation/inputs_validation.pkl", "rb" ) )
+gt_validation_coord = pickle.load( open( "./import_dataset_2/validation/gt_validation_coord.pkl", "rb" ) )
+gt_validation = pickle.load( open( "./import_dataset_2/validation/gt_validation.pkl", "rb" ) )
+in_validation_coord = pickle.load( open( "./import_dataset_2/validation/in_validation_coord.pkl", "rb" ) )
+inputs_validation = pickle.load( open( "./import_dataset_2/validation/inputs_validation.pkl", "rb" ) )
 
 coord_ind = np.append(np.arange(0,2),np.arange(4,164))
 inputs_validation = inputs_validation[:,:,coord_ind]
