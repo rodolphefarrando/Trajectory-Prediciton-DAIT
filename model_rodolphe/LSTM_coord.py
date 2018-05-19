@@ -6,6 +6,8 @@ import numpy as np
 import torch.utils.data as utils
 import time
 import pickle
+import torch
+from torch import nn
 from torch import optim
 torch.manual_seed(1)
 

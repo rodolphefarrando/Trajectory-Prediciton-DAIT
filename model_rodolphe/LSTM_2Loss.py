@@ -6,6 +6,10 @@ import numpy as np
 import torch.utils.data as utils
 import time
 import pickle
+import torch
+from torch import nn
+from torch import optim
+
 torch.manual_seed(1)
 
 
@@ -24,9 +28,6 @@ inputs_validation = pickle.load( open( "./import_dataset_2/validation/inputs_val
 
 inputs_validation = torch.from_numpy(inputs_validation).float()
 gt_validation = torch.from_numpy(gt_validation).float()
-
-
-from torch import optim
 
 lr = 0.01
 lstm = LSTM(input_size = inputs_train.shape[2], output_size = 4, num_layers=2, hidden_size=128)

@@ -3,10 +3,12 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from LSTM import *
 import numpy as np
+import torch
 import torch.utils.data as utils
 import time
 import pickle
 from torch import optim
+from torch import nn
 torch.manual_seed(1)
 
 
