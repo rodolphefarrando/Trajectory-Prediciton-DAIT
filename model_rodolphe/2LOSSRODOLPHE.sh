@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --workdir /home/farrando
+#SBATCH --workdir /home/farrando/Trajectory-Prediciton-DAIT/model_rodolphe
 #SBATCH --nodes 1
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 1
@@ -13,5 +13,5 @@
 
 module load gcc python cuda
 source ~/venv/pytorch/bin/activate
-python3 ./Trajectory-Prediciton-DAIT/model_rodolphe/LSTM_2Loss.py
+python3 LSTM_2Loss.py
 

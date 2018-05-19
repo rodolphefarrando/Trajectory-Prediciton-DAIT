@@ -13,5 +13,5 @@
 
 module load gcc python cuda
 source ~/venv/pytorch/bin/activate
-python3 ./Trajectory-Prediciton-DAIT/model_rodolphe/Full_LSTM.py
+python3 Full_LSTM.py
 
