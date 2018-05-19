@@ -12,6 +12,19 @@ from torch import nn
 torch.manual_seed(1)
 print(torch.__version__)
 
+def mypermute(a):
+    b = torch.zeros(a.shape[1],a.shape[0],a.shape[2])
+    for i in range(a.shape[0]):
+        for j in range(a.shape[2]):
+            b[:,i,j]=a[i,:,j]
+    for i in range(a.shape[1]):
+        for j in range(a.shape[2]):
+            b[i,:,j]=a[:,i,j]
+    for i in range(a.shape[0]):
+        for j in range(a.shape[1]):
+            b[j,i,:]=a[i,j,:]
+    return b
+
 gt_train_coord = pickle.load( open( "./import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
 gt_train  = pickle.load( open( "./import_dataset_2/train/gt_train.pkl", "rb" ) )
 in_train_coord  = pickle.load( open( "./import_dataset_2/train/in_train_coord.pkl", "rb" ) )
@@ -47,7 +60,7 @@ trainloader = utils.DataLoader(traindataset, batch_size=16, shuffle=True)
 valdataset = utils.TensorDataset(inputs_validation, gt_validation[:,1:,:])
 valloader = utils.DataLoader(valdataset, batch_size=16, shuffle=True)
 
-epochs = 500
+epochs = 2
 steps = 0
 print_every = 323
 running_loss = 0
@@ -66,8 +79,8 @@ for e in range(epochs):
         steps += 1
         steps_bis+=1
         
-        train_coord = train_coord.permute([1,0,2])
-        ground_tru = ground_tru.permute([1,0,2])
+        train_coord = mypermute(train_coord)
+        ground_tru = mypermute(ground_tru)
 
         in_train = Variable(train_coord)
         targets = Variable(ground_tru)
@@ -98,8 +111,8 @@ for e in range(epochs):
                 stop = time.time()
                 val_loss=0
                 for ii, (valcoord, valgt) in enumerate(valloader):
-                    valcoord = valcoord.permute([1,0,2])
-                    valgt = valgt.permute([1,0,2])
+                    valcoord = mypermute(valcoord)
+                    valgt = mypermute(valgt)
                     inputs = Variable(valcoord, volatile=True)
                     predicted = lstm.predict(inputs)
                     predicted_bis = predicted[:,:,0:2].clone()
