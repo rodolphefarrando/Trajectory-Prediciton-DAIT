@@ -9,3 +9,9 @@
 #SBATCH --qos gpu_free
 #SBATCH --account civil-459
 #SBATCH --reservation civil-459-project
+
+
+module load gcc python cuda
+source ~/venv/pytorch/bin/activate
+python3 ./Trajectory-Prediciton-DAIT/model_rodolphe/LSTM_speed.py
+
