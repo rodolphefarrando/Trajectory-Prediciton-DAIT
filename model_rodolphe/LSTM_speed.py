@@ -117,3 +117,4 @@ plt.savefig(r'./figures/loss_speed.pdf', bbox_inches='tight')
 
 torch.save(lstm.state_dict(), 'speed_2.pt')
 
+
