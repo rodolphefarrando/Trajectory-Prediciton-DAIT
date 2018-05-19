@@ -104,8 +104,8 @@ for e in range(epochs):
         loss3.backward()
         optimizer.step()
         
-        running_loss += (loss1+loss2+loss3).item()
-        total_train_loss += (loss1+loss2+loss3).item()
+        running_loss += (loss1+loss2+loss3).data[0]
+        total_train_loss += (loss1+loss2+loss3).data[0]
     
         if steps % print_every == 0:
                 stop = time.time()
@@ -122,9 +122,9 @@ for e in range(epochs):
                             predicted_bis[i, :, 0:2] = inputs[-1, :, 0:2] + predicted[i, :, 2:]*0.4
                         else:
                             predicted_bis[i, :, 0:2] = predicted[i - 1, :, 0:2] + predicted[i, :, 2:]*0.4
-                    val_loss+= (criterion(predicted[:,:,0:2],valgt[:,:,0:2]).item()
-                                + criterion(predicted[:,:,2:],valgt[:,:,2:]).item()
-                                + criterion(predicted_bis, valgt[:,:,0:2]).item())
+                    val_loss+= (criterion(predicted[:,:,0:2],valgt[:,:,0:2]).data[0]
+                                + criterion(predicted[:,:,2:],valgt[:,:,2:]).data[0]
+                                + criterion(predicted_bis, valgt[:,:,0:2]).data[0])
                     
                 print("Epoch: {}/{}..".format(e+1, epochs),
                   "Validation loss: {:.4f}..".format(val_loss/ii),
