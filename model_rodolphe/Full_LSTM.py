@@ -12,19 +12,6 @@ from torch import nn
 torch.manual_seed(1)
 print(torch.__version__)
 
-def mypermute(a):
-    b = torch.zeros(a.shape[1],a.shape[0],a.shape[2])
-    for i in range(a.shape[0]):
-        for j in range(a.shape[2]):
-            b[:,i,j]=a[i,:,j]
-    for i in range(a.shape[1]):
-        for j in range(a.shape[2]):
-            b[i,:,j]=a[:,i,j]
-    for i in range(a.shape[0]):
-        for j in range(a.shape[1]):
-            b[j,i,:]=a[i,j,:]
-    return b
-
 gt_train_coord = pickle.load( open( "./import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
 gt_train  = pickle.load( open( "./import_dataset_2/train/gt_train.pkl", "rb" ) )
 in_train_coord  = pickle.load( open( "./import_dataset_2/train/in_train_coord.pkl", "rb" ) )
@@ -60,7 +47,7 @@ trainloader = utils.DataLoader(traindataset, batch_size=16, shuffle=True)
 valdataset = utils.TensorDataset(inputs_validation, gt_validation[:,1:,:])
 valloader = utils.DataLoader(valdataset, batch_size=16, shuffle=True)
 
-epochs = 2
+epochs = 500
 steps = 0
 print_every = 323
 running_loss = 0
@@ -79,8 +66,8 @@ for e in range(epochs):
         steps += 1
         steps_bis+=1
         
-        train_coord = mypermute(train_coord)
-        ground_tru = mypermute(ground_tru)
+        train_coord = train_coord.permute([1,0,2])
+        ground_tru = ground_tru.permute([1,0,2])
 
         in_train = Variable(train_coord)
         targets = Variable(ground_tru)
@@ -104,27 +91,27 @@ for e in range(epochs):
         loss3.backward()
         optimizer.step()
         
-        running_loss += (loss1+loss2+loss3).data[0]
-        total_train_loss += (loss1+loss2+loss3).data[0]
-    
+        running_loss += (loss1+loss2+loss3).item()
+        total_train_loss += (loss1+loss2+loss3).item()
+
         if steps % print_every == 0:
                 stop = time.time()
                 val_loss=0
                 for ii, (valcoord, valgt) in enumerate(valloader):
-                    valcoord = mypermute(valcoord)
-                    valgt = mypermute(valgt)
+                    valcoord = valcoord.permute([1,0,2])
+                    valgt = valgt.permute([1,0,2])
                     inputs = Variable(valcoord, volatile=True)
                     predicted = lstm.predict(inputs)
                     predicted_bis = predicted[:,:,0:2].clone()
-                    
+
                     for i in range(10):
                         if i == 0:
                             predicted_bis[i, :, 0:2] = inputs[-1, :, 0:2] + predicted[i, :, 2:]*0.4
                         else:
                             predicted_bis[i, :, 0:2] = predicted[i - 1, :, 0:2] + predicted[i, :, 2:]*0.4
-                    val_loss+= (criterion(predicted[:,:,0:2],valgt[:,:,0:2]).data[0]
-                                + criterion(predicted[:,:,2:],valgt[:,:,2:]).data[0]
-                                + criterion(predicted_bis, valgt[:,:,0:2]).data[0])
+                    val_loss+= (criterion(predicted[:,:,0:2],valgt[:,:,0:2]).item()
+                                + criterion(predicted[:,:,2:],valgt[:,:,2:]).item()
+                                + criterion(predicted_bis, valgt[:,:,0:2]).item())
                     
                 print("Epoch: {}/{}..".format(e+1, epochs),
                   "Validation loss: {:.4f}..".format(val_loss/ii),
