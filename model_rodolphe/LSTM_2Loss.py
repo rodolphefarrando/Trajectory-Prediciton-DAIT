@@ -11,7 +11,7 @@ from torch import nn
 from torch import optim
 
 torch.manual_seed(1)
-
+print(torch.__version__)
 
 gt_train_coord = pickle.load( open( "./import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
 gt_train  = pickle.load( open( "./import_dataset_2/train/gt_train.pkl", "rb" ) )

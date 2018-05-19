@@ -10,7 +10,7 @@ import pickle
 from torch import optim
 from torch import nn
 torch.manual_seed(1)
-
+print(torch.__version__)
 
 gt_train_coord = pickle.load( open( "./import_dataset_2/train/gt_train_coord.pkl", "rb" ) )
 gt_train  = pickle.load( open( "./import_dataset_2/train/gt_train.pkl", "rb" ) )
