@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --workdir /home/farrando
+#SBATCH --workdir /home/farrando/Trajectory-Prediciton-DAIT/model_rodolphe
 #SBATCH --nodes 1
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 1
