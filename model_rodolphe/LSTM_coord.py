@@ -50,7 +50,7 @@ trainloader = utils.DataLoader(traindataset, batch_size=16, shuffle=True)
 valdataset = utils.TensorDataset(inputs_validation, gt_validation[:,1:,:])
 valloader = utils.DataLoader(valdataset, batch_size=16, shuffle=True)
 
-epochs = 500
+epochs = 150
 steps = 0
 print_every = 323
 running_loss = 0

@@ -35,7 +35,7 @@ gt_validation = torch.from_numpy(gt_validation).float()
 
 inp_size = np.int(inputs_train.shape[2]/4)
 lr = 0.01
-lstm = LSTM(input_size = inputs_train.shape[2], output_size = 4, num_layers=2, hidden_size=128)
+lstm = LSTM(input_size = inputs_train.shape[2], output_size = 4, num_layers=4, hidden_size=128)
 optimizer = optim.Adam(lstm.parameters(), lr=lr,weight_decay=1e-4)
 criterion = nn.MSELoss()
 
@@ -47,7 +47,7 @@ trainloader = utils.DataLoader(traindataset, batch_size=16, shuffle=True)
 valdataset = utils.TensorDataset(inputs_validation, gt_validation[:,1:,:])
 valloader = utils.DataLoader(valdataset, batch_size=16, shuffle=True)
 
-epochs = 150
+epochs = 50
 steps = 0
 print_every = 323
 running_loss = 0
@@ -135,8 +135,8 @@ plt.plot(epoch,loss_val,c='k',label='Validation loss')
 plt.xlabel('epoch')
 plt.ylabel('MSE error')
 plt.legend()
-plt.savefig(r'./figures/loss_full.pdf', bbox_inches='tight')
+plt.savefig(r'./figures/loss_full_highHP.pdf', bbox_inches='tight')
 
 
-torch.save(lstm.state_dict(), 'fullLSTM_4.pt')
+torch.save(lstm.state_dict(), 'fullLSTM_highHP_4.pt')
 
