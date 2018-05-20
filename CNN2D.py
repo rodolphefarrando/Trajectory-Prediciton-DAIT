@@ -22,12 +22,12 @@ class CNN2D(nn.Module):
         self.conv1 = nn.Conv2d(n_input_channels,3,5,padding=2)
         self.conv1_bn = nn.BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True)
      
-        self.fc1 = nn.Linear(10 * 272 * 3, 10 * 4 * 1)
+        self.fc1 = nn.Linear(10 * 164 * 3, 10 * 4 * 1)
             
     def forward(self, x):
         
         x = F.relu(self.conv1_bn(self.conv1(x)))
-        x = x.view(-1, 10 * 272 * 3) # in order to reshape the tensor for as many columns we need
+        x = x.view(-1, 10 * 164 * 3) # in order to reshape the tensor for as many columns we need
         x = self.fc1(x)
  
         return x
