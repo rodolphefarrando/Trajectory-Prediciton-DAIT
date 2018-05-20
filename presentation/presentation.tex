@@ -139,26 +139,39 @@ Motivation:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%% 
 
-\begin{frame}{Previous work: Social LSTM}
+\begin{frame}{Previous work Social LSTM : Human Trajectory Prediction in Crowded Spaces}
+%\begin{block}{Social LSTM : Human Trajectory Prediction in Crowded Spaces}
+%\end{block}
 
-Social LSTM explaination
 
-
-Difference between what Social LSTM and our CNN and LSTM
+In their project, they used different components to make the structure :
 \begin{itemize}
-\item One CNN
-\item One LSTM
+\item One LSTM per pedestrian
+\item A Social Force
 \end{itemize}
-The parameters of both models are standard.
+
+In our project we only use :
+
+\begin{itemize}
+\item One CNN, or one LSTM
+\end{itemize}
+%The parameters of both models are standard.
 \end{frame}
 
 \section{Preprocessing and Postprocessing}
 \begin{frame}{Preprocessing}
-The preprocessing step is crucial in our models\\
+We have :\\
 \begin{itemize}
-\item What we have: files with pedestrians id, frame number and coordinates
-\item What we want: future coordinates
+\item files with pedestrians id
+\item  frame number 
+\item coordinates
 \end{itemize}
+
+We want :\\
+\begin{itemize}
+\item future coordinates
+\end{itemize}
+
 Each trajectories are divided in two (two sets of 10 x and y coordinates): 
 \begin{itemize}
 \item Training coordinates
@@ -188,7 +201,7 @@ Finally our inputs have the following shape: $[10,N,4 * N_{inter}]$, with
 
 
 \begin{frame}
-\frametitle{Outputs shape}
+\frametitle{Outputs structure}
 \begin{itemize}
 \item The models can predict either coordinate or speed or both
 \item We test our two models for 4 different cases
