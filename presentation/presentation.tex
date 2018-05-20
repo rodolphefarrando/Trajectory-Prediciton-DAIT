@@ -139,15 +139,12 @@ Motivation:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%% 
 
-\begin{frame}{Previous work}
-Some models have been developed for trajectory prediction:
-\begin{itemize}
-\item Social forces
-\item Social LSTM
-\item Discrete choice model
-\end{itemize}
+\begin{frame}{Previous work: Social LSTM}
 
-We chose to develop two different models:
+Social LSTM explaination
+
+
+Difference between what Social LSTM and our CNN and LSTM
 \begin{itemize}
 \item One CNN
 \item One LSTM
@@ -242,13 +239,13 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 \frametitle{Results: LSTM}
 \begin{table}[]
 \centering
-\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l|}
-\cline{2-13}
-                                     & \multicolumn{3}{l|}{Model 1}   & \multicolumn{3}{l|}{Model 2}   & \multicolumn{3}{l|}{Model 3}   & \multicolumn{3}{l|}{Model 4}   \\ \cline{2-13} 
-                                     & \multicolumn{3}{l|}{Traj Type} & \multicolumn{3}{l|}{Traj type} & \multicolumn{3}{l|}{Traj type} & \multicolumn{3}{l|}{Traj type} \\ \cline{2-13} 
-                                     & 1         & 2        & 3       & 1         & 2        & 3       & 1         & 2        & 3       & 1         & 2        & 3       \\ \hline
-\multicolumn{1}{|l|}{Mean disp. L2}  &           &          &         &           &          &         &           &          &         &           &          &         \\ \hline
-\multicolumn{1}{|l|}{Final disp. L2} &           &          &         &           &          &         &           &          &         &           &          &         \\ \hline
+\begin{tabular}{c|c|c|c|c|c|c|}
+\cline{2-7}
+                                     & \multicolumn{3}{c|}{Model 3}   & \multicolumn{3}{c|}{Model 4}   \\ \cline{2-7} 
+                                     & \multicolumn{3}{c|}{Traj type} & \multicolumn{3}{c|}{Traj type} \\ \cline{2-7} 
+                                     & 1         & 2        & 3       & 1         & 2        & 3       \\ \hline
+\multicolumn{1}{|c|}{Mean disp. L2}  & 0.519     & 0.484    & 0.568   & 0.537     & 0.473    & 0.576   \\ \hline
+\multicolumn{1}{|c|}{Final disp. L2} & 0.979     & 0.871    & 1.093   & 0.992     & 0.86     & 1.125   \\ \hline
 \end{tabular}
 \end{table}
 \end{frame}
