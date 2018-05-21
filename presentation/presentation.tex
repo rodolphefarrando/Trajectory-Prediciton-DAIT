@@ -1,4 +1,4 @@
-\documentclass[10pt,xcolor=table]{beamer}
+\documentclass[9pt,xcolor=table]{beamer}
 
 
 \mode<presentation>
@@ -153,7 +153,7 @@ In their project, they used different components to make the structure:\\
 \item Social Pooling
 \item Prediction per frame
 \end{itemize}
-\vspace{0.8cm}
+\vspace{1.2cm}
 \onslide<2->{In our project we only use:\\
 \begin{itemize}
 \item One CNN, or one LSTM
@@ -165,9 +165,9 @@ In their project, they used different components to make the structure:\\
 
 
 \begin{column}{.48\textwidth}
-\includegraphics[scale = 0.15]{figure/socialLSTM}
+\includegraphics[scale = 0.17]{figure/socialLSTM}
 \vspace{0.2cm}
-\onslide<2->{\includegraphics[scale = 0.203]{figure/OurModel}}
+\onslide<2->{\includegraphics[scale = 0.23]{figure/OurModel}}
 \end{column}%
 \end{columns}
 \vspace{0.2cm}
@@ -189,6 +189,7 @@ The preprocessing is divided in 4 steps:
 \onslide<2->{\item We normalize the trajectories such that the first point is at $(0,0)$ and the second is at $(0,y_1)$}
 \onslide<3->{\item We calculate axis velocities $V_x$ and $V_y$}
 \onslide<4->{\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise zeros are added}
+\onslide<5->{\item Data augmentation (flip and add noise) cf. last slide}
 \end{enumerate}
 \begin{center}
 \begin{overprint}
@@ -295,6 +296,12 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 \item If the coordinates are predicted: directly use them
 \item If the velocities are predicted: $X_{t} = X_{t-1} + V_{t}\cdot 0.4$, with $0.4$ the time between two frames in seconds
 \end{enumerate}
+Results for both models: 
+\begin{itemize}
+\item 3 Types of trajectory defined: Static, linear and non-linear trajectories
+\item Mean and Final displacements
+\end{itemize}
+
 \end{frame}
 
 
@@ -302,12 +309,14 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 
 \begin{frame}
 \frametitle{Results}
-Results for both models: 
+Linear prediction results:
 \begin{itemize}
-\item 3 Types of trajectory defined: Static, linear and non-linear trajectories
-\item Mean and Final displacements
-\end{itemize}
+\item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
+\item Type 2: \emph{Mean} = 0.541, \emph{Final} = 0.93
+\item Type 3: \emph{Mean} = 0.651, \emph{Final} = 1.457
+\item Total: \emph{Mean} = 0.512, \emph{Final} = 0.982 
 
+\end{itemize}
 \fontsize{7pt}{8.2}\selectfont
 \begin{table}[]
 \centering
@@ -327,17 +336,29 @@ Results for both models:
 \end{tabular}
 \end{adjustwidth}
 \end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Results}
+Discussion
+\end{frame}
+\section{Representation}
+
+\begin{frame}
+\frametitle{Representation}
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Dynamic Representation}
 
-\section{Representation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Discussion}
 
 
-
-
-
-
+\end{frame}
 
 
 \end{document}
