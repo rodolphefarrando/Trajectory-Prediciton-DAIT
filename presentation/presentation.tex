@@ -1,4 +1,4 @@
-\documentclass[10pt]{beamer}
+\documentclass[10pt,xcolor=table]{beamer}
 
 
 \mode<presentation>
@@ -38,6 +38,9 @@
 \usepackage{lipsum}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{changepage}
 
 \apptocmd{\frame}{}{\justifying}{}
 
@@ -248,10 +251,10 @@ Finally our inputs have the following shape: $[10,N,4 * N_{inter}]$, with
 \item $N$: The number of data
 \item $4*N_{inter}$: 4 (being the $x$ and $y$ coordinates and $V_x$ and $V_y$ velocities) times the number of pedestrians interacting with the one of interest.
 \end{itemize}
-\begin{itemize}
-\item The models can predict either coordinate or speed or both
-\item We test our two models for 4 different cases
-\end{itemize}
+%\begin{itemize}
+%\item The models can predict either coordinate or speed or both
+%\item We test our two models for 4 different cases
+%\end{itemize}
 The four different cases are:
 \begin{enumerate}
 \justifying
@@ -294,19 +297,37 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 \end{enumerate}
 \end{frame}
 
+
+
+
 \begin{frame}
-\frametitle{Results: LSTM}
+\frametitle{Results}
+Results for both models: 
+\begin{itemize}
+\item 3 Types of trajectory defined: Static, linear and non-linear trajectories
+\item Mean and Final displacements
+\end{itemize}
+
+\fontsize{7pt}{8.2}\selectfont
 \begin{table}[]
 \centering
-\begin{tabular}{c|c|c|c|c|c|c|}
-\cline{2-7}
-                                     & \multicolumn{3}{c|}{Model 3}   & \multicolumn{3}{c|}{Model 4}   \\ \cline{2-7} 
-                                     & \multicolumn{3}{c|}{Traj type} & \multicolumn{3}{c|}{Traj type} \\ \cline{2-7} 
-                                     & 1         & 2        & 3       & 1         & 2        & 3       \\ \hline
-\multicolumn{1}{|c|}{Mean disp. L2}  & 0.519     & 0.484    & 0.568   & 0.537     & 0.473    & 0.576   \\ \hline
-\multicolumn{1}{|c|}{Final disp. L2} & 0.979     & 0.871    & 1.093   & 0.992     & 0.86     & 1.125   \\ \hline
+\begin{adjustwidth}{-2em}{-2em}
+\begin{tabular}{cc|c|c|c|c|c|c|c|c|}
+\cline{3-10}
+\multicolumn{1}{l}{}                                     &                & \multicolumn{4}{c|}{\textbf{CNN}}                                    & \multicolumn{4}{c|}{\textbf{LSTM}}                                                          \\ \cline{3-10} 
+                                                         &                & \textbf{Type 1} & \textbf{Type 2} & \textbf{Type 3} & \textbf{Total} & \textbf{Type 1} & \textbf{Type 2} & \textbf{Type 3} & \textbf{Total}                        \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &                 &                 &                 &                & 1.16            & 0.768           & 0.817           & 0.837                                 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Coord.}}} & \textbf{Final} &                 &                 &                 &                & 1.269           & 0.911           & 1.087           & 1.011                                 \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &                 &                 &                 &                & 0.742           & 0.397           & 0.448           & {\color[HTML]{FE0000} \textbf{0.461}} \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Speed}}} & \textbf{Final} &                 &                 &                 &                & 1.433           & 0.716           & 0.874           & {\color[HTML]{FE0000} \textbf{0.863}} \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &                 &                 &                 &                & 0.519           & 0.484           & 0.568           & 0.511                                 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Loss}}} & \textbf{Final} &                 &                 &                 &                & 0.979           & 0.871           & 1.093           & 0.946                                 \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &                 &                 &                 &                & 0.537           & 0.473           & 0.576           & 0.51                                  \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Loss}}} & \textbf{Final} &                 &                 &                 &                & 0.992           & 0.86            & 1.125           & 0.95                                  \\ \hline
 \end{tabular}
+\end{adjustwidth}
 \end{table}
+
 \end{frame}
 
 
