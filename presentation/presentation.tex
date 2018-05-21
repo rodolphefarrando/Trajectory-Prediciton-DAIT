@@ -173,14 +173,35 @@ In their project, they used different components to make the structure:\\
 
 
 %%%%%%%%%%%%%%%%%%%% PREPROCESSING %%%%%%%%%%%%%%%
-\section{Pre-processing and Post-processing}
+\section{Data}
+
+
+
 
 \begin{frame}{Pre-processing}
+The preprocessing is divided in 4 steps:
+\begin{enumerate}
+\justifying
+\onslide<1->{\item We isolate each trajectory along with his interaction, that is the other trajectories that are around within the same frames}
+\onslide<2->{\item We normalize the trajectories such that the first point is at $(0,0)$ and the second is at $(0,y_1)$}
+\onslide<3->{\item We calculate axis velocities $V_x$ and $V_y$}
+\onslide<4->{\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise zeros are added}
+\end{enumerate}
+\begin{center}
+\begin{overprint}
+\onslide<1> \centerline {\includegraphics[scale = 0.25]{figure/beforerot}}
+\onslide<2->\centerline {\includegraphics[scale = 0.25]{figure/afterrot}}
+\end{overprint}
+\end{center}
+\end{frame}
+
+\begin{frame}{Data}
 
 \begin{columns}[T] % align columns
-\begin{column}{.48\textwidth}
+\begin{column}{.38\textwidth}
 We have a file with:
 \begin{itemize}
+\justifying
 \item Pedestrians ID
 \item Frame number 
 \item Twenty sets of $x$ and $y$ coordinates per pedestrian
@@ -188,6 +209,8 @@ We have a file with:
 \vspace{0.5cm}
 \onslide<2->{We want :\\
 \begin{itemize}
+\justifying
+
 \item Train on the 10 first coordinates
 \item Predict the next 10 
 \end{itemize}}
@@ -197,34 +220,27 @@ We have a file with:
 \hfill%
 
 % align columns
-\begin{column}{.48\textwidth}
+\begin{column}{.61\textwidth}
 \begin{table}[]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-Frame Number & ID & X & Y \\ \hline
-        \vdots     &  \vdots  &  \vdots &  \vdots \\ \hline
+Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
+        \vdots     &  \vdots  &  \vdots &  \vdots &  \vdots &  \vdots \\ \hline
 \end{tabular}
 \end{table}
-\vspace{1cm}
+\vspace{0.6cm}
 \onslide<2->{
-\includegraphics[scale=0.2]{figure/examplepres}
+Example of trajectory to predict
+\includegraphics[scale=0.25]{figure/examplepres}
 }
 \end{column}%
 \end{columns}
 
 \end{frame}
 
-
-\begin{frame}{Preprocessing}
-The preprocessing is divided in 4 steps:
-\begin{enumerate}
-\justifying
-\item We isolate each trajectory along with his interaction, that is the other trajectories that are around within the same frames
-\item We normalize the trajectories such that the first point is at $(0,0)$ and the second is at $(0,y_1)$
-\item We calculate axis velocities $V_x$ and $V_y$
-\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise zeros are added
-\end{enumerate}
+\begin{frame}
+\frametitle{Outputs structure}
 Finally our inputs have the following shape: $[10,N,4 * N_{inter}]$, with 
 \begin{itemize}
 \justifying
@@ -232,11 +248,6 @@ Finally our inputs have the following shape: $[10,N,4 * N_{inter}]$, with
 \item $N$: The number of data
 \item $4*N_{inter}$: 4 (being the $x$ and $y$ coordinates and $V_x$ and $V_y$ velocities) times the number of pedestrians interacting with the one of interest.
 \end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Outputs structure}
 \begin{itemize}
 \item The models can predict either coordinate or speed or both
 \item We test our two models for 4 different cases
