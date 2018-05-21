@@ -117,7 +117,6 @@
 
 \section{Introduction}
 \begin{frame}{Introduction}
-Motivation:
 \begin{itemize}
 \onslide<1->{\item Trajectory prediction is crucial for improving autonomous vehicles behaviour}
 \onslide<2->{\item Could avoid situations seen in the ethical lectures}
@@ -125,8 +124,8 @@ Motivation:
 
 \begin{center}
 \begin{overprint}
-\onslide<1> \centerline {\includegraphics[scale = 0.3]{figure/intro1}}
-\onslide<2->\centerline {\includegraphics[scale = 0.3]{figure/intro2}}
+\onslide<1> \centerline {\includegraphics[scale = 0.32]{figure/intro1}}
+\onslide<2->\centerline {\includegraphics[scale = 0.32]{figure/intro2}}
 \end{overprint}
 \end{center}
 
@@ -143,43 +142,77 @@ Motivation:
 %\begin{block}{Social LSTM : Human Trajectory Prediction in Crowded Spaces}
 %\end{block}
 
-
-In their project, they used different components to make the structure :
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+In their project, they used different components to make the structure:\\
 \begin{itemize}
 \item One LSTM per pedestrian
-\item A Social Pooling
-\item per frame
+\item Social Pooling
+\item Prediction per frame
 \end{itemize}
-
-In our project we only use :
-
+\vspace{0.8cm}
+\onslide<2->{In our project we only use:\\
 \begin{itemize}
 \item One CNN, or one LSTM
-\item per pedestrian
-\end{itemize}
-%The parameters of both models are standard.
+\item Prediction per pedestrian
+\end{itemize}}
+\end{column}%
+
+\hfill%
+
+
+\begin{column}{.48\textwidth}
+\includegraphics[scale = 0.15]{figure/socialLSTM}
+\vspace{0.2cm}
+\onslide<2->{\includegraphics[scale = 0.203]{figure/OurModel}}
+\end{column}%
+\end{columns}
+\vspace{0.2cm}
+\tiny{\emph{Images from Social LSTM:Human Trajectory Prediction in Crowded Spaces and courses lecture}}
 \end{frame}
 
-\section{Preprocessing and Postprocessing}
-\begin{frame}{Preprocessing}
-We have :\\
-\begin{itemize}
-\item files with pedestrians id
-\item  frame number 
-\item coordinates
-\end{itemize}
 
-We want :\\
-\begin{itemize}
-\item future coordinates
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%% PREPROCESSING %%%%%%%%%%%%%%%
+\section{Pre-processing and Post-processing}
 
-Each trajectories are divided in two (two sets of 10 x and y coordinates): 
+\begin{frame}{Pre-processing}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+We have a file with:
 \begin{itemize}
-\item Training coordinates
-\item Ground truth
-\item We want to predict a sequence of 10 x and y coordinates such that they are close to the ground truth
+\item Pedestrians ID
+\item Frame number 
+\item Twenty sets of $x$ and $y$ coordinates per pedestrian
 \end{itemize}
+\vspace{0.5cm}
+\onslide<2->{We want :\\
+\begin{itemize}
+\item Train on the 10 first coordinates
+\item Predict the next 10 
+\end{itemize}}
+
+\end{column}%
+
+\hfill%
+
+% align columns
+\begin{column}{.48\textwidth}
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Frame Number & ID & X & Y \\ \hline
+        \vdots     &  \vdots  &  \vdots &  \vdots \\ \hline
+\end{tabular}
+\end{table}
+\vspace{1cm}
+\onslide<2->{
+\includegraphics[scale=0.2]{figure/examplepres}
+}
+\end{column}%
+\end{columns}
+
 \end{frame}
 
 

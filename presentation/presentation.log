@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  21 MAY 2018 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  21 MAY 2018 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1181,79 +1181,119 @@ thkerncmss.
 ) [3
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 139
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 138
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 139.
+LaTeX Font Info:    No file OMScmss.fd. on input line 138.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 139.
+(Font)              for symbol `textbullet' on input line 138.
 
 <figure/intro1.png, id=64, 605.26125pt x 467.7475pt>
 File: figure/intro1.png Graphic file (type png)
  <use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 139.
-(pdftex.def)             Requested size: 181.57976pt x 140.32532pt.
+Package pdftex.def Info: figure/intro1.png used on input line 138.
+(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 <figure/intro2.png, id=66, 605.26125pt x 467.7475pt>
 File: figure/intro2.png Graphic file (type png)
  <use figure/intro2.png>
-Package pdftex.def Info: figure/intro2.png used on input line 139.
-(pdftex.def)             Requested size: 181.57976pt x 140.32532pt.
+Package pdftex.def Info: figure/intro2.png used on input line 138.
+(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 139.
+(Font)              size <5> substituted on input line 138.
 
 [4
 
  <./figure/intro1.png>]
 File: figure/intro1.png Graphic file (type png)
  <use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 139.
-(pdftex.def)             Requested size: 181.57976pt x 140.32532pt.
+Package pdftex.def Info: figure/intro1.png used on input line 138.
+(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 File: figure/intro2.png Graphic file (type png)
  <use figure/intro2.png>
-Package pdftex.def Info: figure/intro2.png used on input line 139.
-(pdftex.def)             Requested size: 181.57976pt x 140.32532pt.
+Package pdftex.def Info: figure/intro2.png used on input line 138.
+(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 [5
 
- <./figure/intro2.png>] [6
+ <./figure/intro2.png>]
+<figure/socialLSTM.png, id=80, 645.41125pt x 578.16pt>
+File: figure/socialLSTM.png Graphic file (type png)
 
-] [7
+<use figure/socialLSTM.png>
+Package pdftex.def Info: figure/socialLSTM.png used on input line 172.
+(pdftex.def)             Requested size: 96.80751pt x 86.72025pt.
+
+<figure/OurModel.png, id=81, 477.785pt x 404.51125pt>
+File: figure/OurModel.png Graphic file (type png)
+
+<use figure/OurModel.png>
+Package pdftex.def Info: figure/OurModel.png used on input line 172.
+(pdftex.def)             Requested size: 96.99152pt x 82.11676pt.
+ [6
+
+ <./figure/socialLSTM.png> <./figure/OurModel.png>]
+File: figure/socialLSTM.png Graphic file (type png)
+<use figure/socialLSTM.png>
+Package pdftex.def Info: figure/socialLSTM.png used on input line 172.
+(pdftex.def)             Requested size: 96.80751pt x 86.72025pt.
+File: figure/OurModel.png Graphic file (type png)
+ <use figure/OurModel.png>
+Package pdftex.def Info: figure/OurModel.png used on input line 172.
+(pdftex.def)             Requested size: 96.99152pt x 82.11676pt.
+ [7
 
 ] [8
 
-] [9
+]
+<figure/examplepres.pdf, id=102, 728.07077pt x 446.51344pt>
+File: figure/examplepres.pdf Graphic file (type pdf)
 
-] [10
+<use figure/examplepres.pdf>
+Package pdftex.def Info: figure/examplepres.pdf used on input line 216.
+(pdftex.def)             Requested size: 145.61157pt x 89.3011pt.
+ [9
+
+ <./figure/examplepres.pdf>]
+File: figure/examplepres.pdf Graphic file (type pdf)
+
+<use figure/examplepres.pdf>
+Package pdftex.def Info: figure/examplepres.pdf used on input line 216.
+(pdftex.def)             Requested size: 145.61157pt x 89.3011pt.
+ [10
 
 ] [11
 
 ] [12
 
+] [13
+
+] [14
+
 ]
-<figure/manytomany.png, id=121, 688.5725pt x 642.4pt>
+<figure/manytomany.png, id=150, 688.5725pt x 642.4pt>
 File: figure/manytomany.png Graphic file (type png)
 
 <use figure/manytomany.png>
-Package pdftex.def Info: figure/manytomany.png used on input line 236.
+Package pdftex.def Info: figure/manytomany.png used on input line 269.
 (pdftex.def)             Requested size: 172.1427pt x 160.59961pt.
 
-Overfull \vbox (15.57967pt too high) detected at line 236
+Overfull \vbox (15.57967pt too high) detected at line 269
  []
 
-[13
+[15
 
- <./figure/manytomany.png>] [14
-
-] [15
-
-] [16
+ <./figure/manytomany.png>] [16
 
 ] [17
+
+] [18
+
+] [19
 
 ]
 \tf@nav=\write6
@@ -1265,13 +1305,13 @@ Overfull \vbox (15.57967pt too high) detected at line 236
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: B2FC4A918FA7596D70090156C7570F52;246.
+(rerunfilecheck)             Checksum: DFA2B1F1E1D7D6BA3E6D52BF23A07121;248.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1280,14 +1320,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
  ) 
 Here is how much of TeX's memory you used:
- 23180 strings out of 493014
- 469735 string characters out of 6133351
+ 23202 strings out of 493014
+ 470155 string characters out of 6133351
  632874 words of memory out of 5000000
- 26148 multiletter control sequences out of 15000+600000
- 9236 words of font info for 34 fonts, out of 8000000 for 9000
+ 26161 multiletter control sequences out of 15000+600000
+ 9587 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,86p,1714b,720s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1295,19 +1335,20 @@ Here is how much of TeX's memory you used:
 pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on presentation.pdf (17 pages, 1026903 bytes).
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on presentation.pdf (19 pages, 1723825 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
