@@ -143,7 +143,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%% 
 
-\begin{frame}{Previous work Social LSTM : Human Trajectory Prediction in Crowded Spaces}
+\begin{frame}{Previous work [1]}
 %\begin{block}{Social LSTM : Human Trajectory Prediction in Crowded Spaces}
 %\end{block}
 
@@ -156,7 +156,7 @@ In their project, they used different components to make the structure:\\
 \item Prediction per frame
 \end{itemize}
 \vspace{1.2cm}
-\onslide<2->{In our project we only use:\\
+\onslide<2->{In our project, we use:\\
 \begin{itemize}
 \item One CNN, or one LSTM
 \item Prediction per pedestrian
@@ -173,7 +173,8 @@ In their project, they used different components to make the structure:\\
 \end{column}%
 \end{columns}
 \vspace{0.2cm}
-\tiny{\emph{Images from Social LSTM:Human Trajectory Prediction in Crowded Spaces and courses lecture}}
+\footnotesize{[1] Alahi et.al, \textbf{Social LSTM:Human Trajectory Prediction in Crowded Spaces}, 2016}\\
+\footnotesize{\emph{Images from [1] and course lecture}}
 \end{frame}
 
 
@@ -184,14 +185,14 @@ In their project, they used different components to make the structure:\\
 
 
 \begin{frame}{Pre-processing}
-The preprocessing is divided in 4 steps:
+The preprocessing is divided in 5 steps:
 \begin{enumerate}
 \justifying
-\onslide<1->{\item We isolate each trajectory along with his interaction, that is the other trajectories that are around within the same frames}
-\onslide<2->{\item We normalize the trajectories such that the first point is at $(0,0)$ and the second is at $(0,y_1)$}
-\onslide<3->{\item We calculate axis velocities $V_x$ and $V_y$}
-\onslide<4->{\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise we add zeros}
-\onslide<5->{\item Data augmentation (flip and add noise) cf. last slide}
+\onslide<1->{\item Isolate each trajectory along with his interaction}
+\onslide<2->{\item Normalize the trajectories: the first point is at $(0,0)$; the second is at $(0,y_1)$}
+\onslide<3->{\item Calculate axis velocities $V_x$ and $V_y$}
+\onslide<4->{\item For each frame, if there is an interacting pedestrian we add its coordinates and speed otherwise we add zeros}
+\onslide<5->{\item Data augmentation: flip and add noise to trajectories}
 \end{enumerate}
 \begin{center}
 \begin{overprint}
@@ -234,7 +235,7 @@ We have a file with:
 \hline
 Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
         0     &  i  &  0 &  0 &  0 &  0 \\ \hline
-        10     &  i  &  0 &  $y$ &  0 &  $V_x$ \\ \hline
+        10     &  i  &  0 &  $y_1$ &  0 &  $V_{y_1}$ \\ \hline
         \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
 \end{tabular}
 \end{table}
@@ -251,16 +252,18 @@ Example of trajectory to predict
 
 \section{Models}
 \begin{frame}{CNN}
+CNN architecture:
 \begin{figure}
 \includegraphics[scale = 0.35]{figure/CNN}
 \end{figure}
-\textbf{Inputs:} sequence of coordinates and velocities of the pedestrians\\
+\textbf{Inputs:}  sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
 \textbf{Outputs:} sequence of predicted coordinates and velocities for a trajectory of interest 
 \end{frame}
 
 \begin{frame}{LSTM}
+LSTM architecture:
 \begin{figure}
-\includegraphics[scale = 0.25]{figure/manytomany}
+\includegraphics[scale = 0.23]{figure/manytomany}
 \end{figure}
 \textbf{Inputs:} sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
 \textbf{Outputs:} sequence of predicted coordinates and velocities for the trajectory of interest 
@@ -272,8 +275,8 @@ Example of trajectory to predict
 To calculate the correctness of the prediction two indicators are used:
 \begin{enumerate}
 \justifying
-\item The final displacement error: $e_{fin} = \sqrt{(X_{n}-X_{pred,n})^2}$
-\item The mean displacement error: $e_{fin} = \sqrt{\frac{\sum_{i=0}^n(X_{gt,i}-X_{pred,i})^2}{(n)}}$
+\item The final displacement error: $e_{fin} = \sqrt{(X_{gt,n}-X_{pred,n})^2}$
+\item The mean displacement error: $e_{mean} = \sqrt{\frac{\sum_{i=0}^n(X_{gt,i}-X_{pred,i})^2}{(n)}}$
 \end{enumerate}
 \vspace{0.5cm}
 
@@ -288,7 +291,7 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 
 \begin{frame}
 \frametitle{Results: Introduction}
-Four different losses are tested for each model:
+Four different cases, that corresponds to four losses, are tested for each model:
 \begin{enumerate}
 \justifying
 \item Predict coordinates with loss defines as $L_1 = (X-X_{pred})^2$ with $X = [x,y]$
@@ -296,14 +299,14 @@ Four different losses are tested for each model:
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
 \end{enumerate}
-The fourth case ensure that coordinates and speeds are not predicted independently.\\
 \vspace{0.3cm}
-Each case is tested on three trajectory types:\\
+Each case is tested on four trajectory types:\\
 \begin{enumerate}
 \justifying
 \item Static
 \item Linear trajectories
 \item Non-linear trajectories
+\item All of them together
 \end{enumerate}
 \end{frame}
 
@@ -311,9 +314,9 @@ Each case is tested on three trajectory types:\\
 
 
 \begin{frame}
-\frametitle{Results}
+\frametitle{Results: Table}
 \fontsize{9pt}{5.5}\selectfont
-Linear prediction results:
+Results with linear prediction:
 \begin{itemize}
 \item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
 \item Type 2: \emph{Mean} = 0.541, \emph{Final} = 0.93
@@ -334,34 +337,33 @@ Linear prediction results:
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.567                 &5.133                 &1.911                 &4.17                & 0.726           & 0.573           & 0.651           & 0.616 \\ \cline{2-10} 
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Speed}}} & \textbf{Final} &0.77                 &6.971                 &3.882                 &5.587                & 1.412           & 1.045           & 1.231           & 1.148 \\ \hline
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &1.269      &5.134                 &1.762                 &{\color[HTML]{FE0000} \textbf{4.163}}                & 0.695           & 0.532           & 0.627           &  {\color[HTML]{FE0000} \textbf{0.581}}                                 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Loss}}} & \textbf{Final} &2.727                 &6.978                 &3.546                 &{\color[HTML]{FE0000} \textbf{5.57}}                & 1.302           & 0.963           & 1.2           &  {\color[HTML]{FE0000} \textbf{1.076}}                                 \\ \hline
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Losses}}} & \textbf{Final} &2.727                 &6.978                 &3.546                 &{\color[HTML]{FE0000} \textbf{5.57}}                & 1.302           & 0.963           & 1.2           &  {\color[HTML]{FE0000} \textbf{1.076}}                                 \\ \hline
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.549                 &5.135                 &3.829                 &4.163                & 0.748           & 0.607           & 0.681           & 0.647                                  \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Loss}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Losses}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
 \end{tabular}
 \end{adjustwidth}
 \end{table}
 \end{frame}
 
 \begin{frame}
-\frametitle{Results}
+\frametitle{Results: Discussion}
 LSTM and CNN comparison:
 \begin{itemize}
-\item For both LSTM and CNN, the "2 Loss" model have the better results
+\item For both LSTM and CNN, the "2 Losses" model have the better results
 \item For the CNN, results are much higher $\Rightarrow$ the absence of memory is really penalising
 \end{itemize}
 LSTM and linear prediction comparison:
 \begin{itemize}
-\item Except for the first type trajectory, our "2 Loss" LSTM have better results
+\item Except for the first type trajectory, our "2 Losses" LSTM have better results
 \item Even for static trajectory, the LSTM tries to predict dynamic trajectory
-\item A few examples will show the difference
 \end{itemize}
 \end{frame}
 \section{Representation}
 
 \begin{frame}
 \frametitle{Representation: a few examples}
-\only<1>{Linear trajectories:}
-\only<2>{Type 3 trajectory:}
+\only<1>{Linear trajectory:}
+\only<2>{Non-linear trajectory:}
 \only<3>{But sometimes prediction fails:}
 \begin{center}
 \begin{overprint}
@@ -383,13 +385,13 @@ What can we conclude ?\\
 \begin{itemize}
 \item CNN is not well structured for this application
 \item LSTM gives better trajectories compare to the other models
-\item The statics trajectories are the most difficult to predict
+\item Models struggle to predict the statics trajectories
 \end{itemize}
 
 What can be debated ?
 \begin{itemize}
 \item The inputs of the CNN model can be improved
-\item The Inputs can be discussed concerning the initialisation of the matrix of interactions
+\item The inputs can be discussed concerning the initialisation of the matrix of interactions
 \item Our data augmentation can be discussed
 \end{itemize}
 
