@@ -124,22 +124,18 @@
 \begin{itemize}
 \justifying
 \onslide<1->{\item Trajectory prediction is crucial for improving autonomous vehicles behaviour}
-\onslide<2->{\item Could avoid situations seen in the ethical lectures}
+\onslide<3->{\item Could avoid situations seen in the ethical lectures}
 \end{itemize}
 
 \begin{center}
 \begin{overprint}
-\onslide<1> \centerline {\includegraphics[scale = 0.32]{figure/intro1}}
-\onslide<2->\centerline {\includegraphics[scale = 0.32]{figure/intro2}}
+\onslide<2> \centerline {\includegraphics[scale = 0.32]{figure/intro1}}
+\onslide<3->\centerline {\includegraphics[scale = 0.32]{figure/intro2}}
 \end{overprint}
 \end{center}
 
 
-%Goal:
-%\begin{itemize}
-%\item Find model which predict trajectories better than linear prediction
-%\item Predict coordinates
-%\end{itemize}
+\onslide<2->{\footnotesize{Image from lecture note 9}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -188,10 +184,10 @@ In their project, they used different components to make the structure:\\
 The preprocessing is divided in 5 steps:
 \begin{enumerate}
 \justifying
-\onslide<1->{\item Isolate each trajectory along with his interaction}
+\onslide<1->{\item Isolate each trajectory along with its interaction}
 \onslide<2->{\item Normalize the trajectories: the first point is at $(0,0)$; the second is at $(0,y_1)$}
 \onslide<3->{\item Calculate axis velocities $V_x$ and $V_y$}
-\onslide<4->{\item For each frame, if there is an interacting pedestrian we add its coordinates and speed otherwise we add zeros}
+\onslide<4->{\item For each frame, if there is an interacting pedestrian we add his/her coordinates and speed otherwise we add zeros}
 \onslide<5->{\item Data augmentation: flip and add noise to trajectories}
 \end{enumerate}
 \begin{center}
@@ -417,6 +413,15 @@ What is the problem:
 The first problem is hard to overcome. The solution would be to not flip the trajectory $\Rightarrow$ we tried and with less data, we have worst prediction.\\
 The second problem is not a really one. Trajectory are often similar for a lot of them, the issue can be problematic for "unconventional" trajectories, and the model can "learn by heart" the output.
 \end{frame}
+
+\begin{frame}
+\frametitle{Hyperparameters LSTM}
+Loss validation depending on the hyperparameters:
+\begin{figure}
+\includegraphics[scale = 0.4]{figure/hyperparam}
+\end{figure}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Loss Functions: Coordinates model}
