@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 11:33
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  22 MAY 2018 11:24
+>>>>>>> e96bb5dc23595cd64af861702692fa2aa0e7880a
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1492,7 +1496,11 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+<<<<<<< HEAD
 Output written on presentation.pdf (30 pages, 1826992 bytes).
+=======
+Output written on presentation.pdf (27 pages, 1825540 bytes).
+>>>>>>> e96bb5dc23595cd64af861702692fa2aa0e7880a
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  267 compressed objects within 3 object streams
