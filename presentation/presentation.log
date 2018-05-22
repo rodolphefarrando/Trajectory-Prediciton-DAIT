@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1380,41 +1380,41 @@ thkerncmss.
 ) [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 142
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 143
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 142.
+LaTeX Font Info:    No file OMScmss.fd. on input line 143.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 142.
+(Font)              for symbol `textbullet' on input line 143.
 
 <figure/intro1.png, id=52, 605.26125pt x 467.7475pt>
 File: figure/intro1.png Graphic file (type png)
  <use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 142.
+Package pdftex.def Info: figure/intro1.png used on input line 143.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 <figure/intro2.png, id=54, 605.26125pt x 467.7475pt>
 File: figure/intro2.png Graphic file (type png)
  <use figure/intro2.png>
-Package pdftex.def Info: figure/intro2.png used on input line 142.
+Package pdftex.def Info: figure/intro2.png used on input line 143.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 142.
+(Font)              size <5> substituted on input line 143.
 
 [3
 
  <./figure/intro1.png>]
 File: figure/intro1.png Graphic file (type png)
  <use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 142.
+Package pdftex.def Info: figure/intro1.png used on input line 143.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 File: figure/intro2.png Graphic file (type png)
  <use figure/intro2.png>
-Package pdftex.def Info: figure/intro2.png used on input line 142.
+Package pdftex.def Info: figure/intro2.png used on input line 143.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
 [4
@@ -1424,17 +1424,17 @@ Package pdftex.def Info: figure/intro2.png used on input line 142.
 File: figure/socialLSTM.png Graphic file (type png)
 
 <use figure/socialLSTM.png>
-Package pdftex.def Info: figure/socialLSTM.png used on input line 176.
+Package pdftex.def Info: figure/socialLSTM.png used on input line 177.
 (pdftex.def)             Requested size: 109.71846pt x 98.28589pt.
 
 <figure/OurModel.png, id=70, 477.785pt x 404.51125pt>
 File: figure/OurModel.png Graphic file (type png)
 
 <use figure/OurModel.png>
-Package pdftex.def Info: figure/OurModel.png used on input line 176.
+Package pdftex.def Info: figure/OurModel.png used on input line 177.
 (pdftex.def)             Requested size: 109.88823pt x 93.03563pt.
 
-Overfull \vbox (7.8536pt too high) detected at line 176
+Overfull \vbox (7.8536pt too high) detected at line 177
  []
 
 [5
@@ -1443,14 +1443,14 @@ Overfull \vbox (7.8536pt too high) detected at line 176
 File: figure/socialLSTM.png Graphic file (type png)
 
 <use figure/socialLSTM.png>
-Package pdftex.def Info: figure/socialLSTM.png used on input line 176.
+Package pdftex.def Info: figure/socialLSTM.png used on input line 177.
 (pdftex.def)             Requested size: 109.71846pt x 98.28589pt.
 File: figure/OurModel.png Graphic file (type png)
  <use figure/OurModel.png>
-Package pdftex.def Info: figure/OurModel.png used on input line 176.
+Package pdftex.def Info: figure/OurModel.png used on input line 177.
 (pdftex.def)             Requested size: 109.88823pt x 93.03563pt.
 
-Overfull \vbox (7.8536pt too high) detected at line 176
+Overfull \vbox (7.8536pt too high) detected at line 177
  []
 
 [6
@@ -1461,17 +1461,17 @@ Overfull \vbox (7.8536pt too high) detected at line 176
 File: figure/beforerot.pdf Graphic file (type pdf)
 
 <use figure/beforerot.pdf>
-Package pdftex.def Info: figure/beforerot.pdf used on input line 201.
+Package pdftex.def Info: figure/beforerot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
 <figure/afterrot.pdf, id=92, 743.62639pt x 446.51344pt>
 File: figure/afterrot.pdf Graphic file (type pdf)
 
 <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 201.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
-Overfull \vbox (17.64925pt too high) detected at line 201
+Overfull \vbox (17.64925pt too high) detected at line 202
  []
 
 [8
@@ -1479,15 +1479,15 @@ Overfull \vbox (17.64925pt too high) detected at line 201
  <./figure/beforerot.pdf>]
 File: figure/beforerot.pdf Graphic file (type pdf)
  <use figure/beforerot.pdf>
-Package pdftex.def Info: figure/beforerot.pdf used on input line 201.
+Package pdftex.def Info: figure/beforerot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 File: figure/afterrot.pdf Graphic file (type pdf)
 
 <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 201.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
-Overfull \vbox (17.64925pt too high) detected at line 201
+Overfull \vbox (17.64925pt too high) detected at line 202
  []
 
 [9
@@ -1495,15 +1495,15 @@ Overfull \vbox (17.64925pt too high) detected at line 201
  <./figure/afterrot.pdf>]
 File: figure/beforerot.pdf Graphic file (type pdf)
  <use figure/beforerot.pdf>
-Package pdftex.def Info: figure/beforerot.pdf used on input line 201.
+Package pdftex.def Info: figure/beforerot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 File: figure/afterrot.pdf Graphic file (type pdf)
 
 <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 201.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
-Overfull \vbox (17.64925pt too high) detected at line 201
+Overfull \vbox (17.64925pt too high) detected at line 202
  []
 
 [10
@@ -1511,14 +1511,14 @@ Overfull \vbox (17.64925pt too high) detected at line 201
 ]
 File: figure/beforerot.pdf Graphic file (type pdf)
  <use figure/beforerot.pdf>
-Package pdftex.def Info: figure/beforerot.pdf used on input line 201.
+Package pdftex.def Info: figure/beforerot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 File: figure/afterrot.pdf Graphic file (type pdf)
  <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 201.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
-Overfull \vbox (17.64925pt too high) detected at line 201
+Overfull \vbox (17.64925pt too high) detected at line 202
  []
 
 [11
@@ -1526,20 +1526,20 @@ Overfull \vbox (17.64925pt too high) detected at line 201
 ]
 File: figure/beforerot.pdf Graphic file (type pdf)
  <use figure/beforerot.pdf>
-Package pdftex.def Info: figure/beforerot.pdf used on input line 201.
+Package pdftex.def Info: figure/beforerot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 File: figure/afterrot.pdf Graphic file (type pdf)
  <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 201.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 202.
 (pdftex.def)             Requested size: 185.90614pt x 111.62808pt.
 
-Overfull \vbox (17.64925pt too high) detected at line 201
+Overfull \vbox (17.64925pt too high) detected at line 202
  []
 
 [12
 
 ]
-Underfull \hbox (badness 1824) in paragraph at lines 247--247
+Underfull \hbox (badness 1824) in paragraph at lines 248--248
 []\OT1/cmss/m/n/9 Twenty sets of $\OT1/mathkerncmss/m/sl/9 x$ \OT1/cmss/m/n/9 a
 nd
  []
@@ -1548,19 +1548,19 @@ nd
 File: figure/examplepres.pdf Graphic file (type pdf)
 
 <use figure/examplepres.pdf>
-Package pdftex.def Info: figure/examplepres.pdf used on input line 247.
+Package pdftex.def Info: figure/examplepres.pdf used on input line 248.
 (pdftex.def)             Requested size: 182.01724pt x 111.62808pt.
  [13
 
  <./figure/examplepres.pdf>]
-Underfull \hbox (badness 1824) in paragraph at lines 247--247
+Underfull \hbox (badness 1824) in paragraph at lines 248--248
 []\OT1/cmss/m/n/9 Twenty sets of $\OT1/mathkerncmss/m/sl/9 x$ \OT1/cmss/m/n/9 a
 nd
  []
 
 File: figure/examplepres.pdf Graphic file (type pdf)
 <use figure/examplepres.pdf>
-Package pdftex.def Info: figure/examplepres.pdf used on input line 247.
+Package pdftex.def Info: figure/examplepres.pdf used on input line 248.
 (pdftex.def)             Requested size: 182.01724pt x 111.62808pt.
  [14
 
@@ -1572,7 +1572,7 @@ Package pdftex.def Info: figure/examplepres.pdf used on input line 247.
 <figure/CNN.pdf, id=182, 519.30885pt x 352.4098pt>
 File: figure/CNN.pdf Graphic file (type pdf)
  <use figure/CNN.pdf>
-Package pdftex.def Info: figure/CNN.pdf used on input line 283.
+Package pdftex.def Info: figure/CNN.pdf used on input line 284.
 (pdftex.def)             Requested size: 181.76082pt x 123.34528pt.
 
 [17
@@ -1581,10 +1581,10 @@ Package pdftex.def Info: figure/CNN.pdf used on input line 283.
 File: figure/manytomany.png Graphic file (type png)
 
 <use figure/manytomany.png>
-Package pdftex.def Info: figure/manytomany.png used on input line 291.
+Package pdftex.def Info: figure/manytomany.png used on input line 292.
 (pdftex.def)             Requested size: 172.1427pt x 160.59961pt.
 
-Overfull \vbox (0.90866pt too high) detected at line 291
+Overfull \vbox (0.90866pt too high) detected at line 292
  []
 
 [18
@@ -1594,7 +1594,7 @@ Overfull \vbox (0.90866pt too high) detected at line 291
 ] [20
 
 ]
-Overfull \hbox (0.5009pt too wide) in paragraph at lines 347--347
+Overfull \hbox (0.5009pt too wide) in paragraph at lines 353--353
 []\OT1/cmss/m/n/7 [] [] 
  []
 
@@ -1608,52 +1608,52 @@ Overfull \hbox (0.5009pt too wide) in paragraph at lines 347--347
 File: figure/fig_510.pdf Graphic file (type pdf)
 
 <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 
 <figure/fig_1552.pdf, id=248, 712.74092pt x 430.48926pt>
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 
 <figure/fig_1621.pdf, id=249, 712.74092pt x 426.37231pt>
 File: figure/fig_1621.pdf Graphic file (type pdf)
 
 <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
  [24
 
  <./figure/fig_510.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
  [25
 
  <./figure/fig_1552.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
  <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
 
 [26
@@ -1679,7 +1679,7 @@ ng> [27
 File: figure/loss_coord.pdf Graphic file (type pdf)
 
 <use figure/loss_coord.pdf>
-Package pdftex.def Info: figure/loss_coord.pdf used on input line 429.
+Package pdftex.def Info: figure/loss_coord.pdf used on input line 435.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [31
 
@@ -1688,7 +1688,7 @@ Package pdftex.def Info: figure/loss_coord.pdf used on input line 429.
 File: figure/loss_speed.pdf Graphic file (type pdf)
 
 <use figure/loss_speed.pdf>
-Package pdftex.def Info: figure/loss_speed.pdf used on input line 437.
+Package pdftex.def Info: figure/loss_speed.pdf used on input line 443.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [32
 
@@ -1697,7 +1697,7 @@ Package pdftex.def Info: figure/loss_speed.pdf used on input line 437.
 File: figure/loss_2Loss_ND.pdf Graphic file (type pdf)
 
 <use figure/loss_2Loss_ND.pdf>
-Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 445.
+Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 451.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [33
 
@@ -1706,7 +1706,7 @@ Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 445.
 File: figure/loss_full_last_data.pdf Graphic file (type pdf)
 
 <use figure/loss_full_last_data.pdf>
-Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 453.
+Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 459.
 
 (pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
 Package atenddvi Info: Last page = 34.
@@ -1722,12 +1722,12 @@ Package atenddvi Info: Last page = 34.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 456.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 462.
 
 (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 462.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: A565F3F2D36E2E47B6BAD88B3474BA6E;258.
 
@@ -1738,7 +1738,7 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 462.
  ) 
 Here is how much of TeX's memory you used:
  31064 strings out of 493014
@@ -1763,7 +1763,7 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (34 pages, 2347308 bytes).
+Output written on presentation.pdf (34 pages, 2347338 bytes).
 PDF statistics:
  770 PDF objects out of 1000 (max. 8388607)
  382 compressed objects within 4 object streams

@@ -122,6 +122,7 @@
 \section{Introduction}
 \begin{frame}{Introduction}
 \begin{itemize}
+\justifying
 \onslide<1->{\item Trajectory prediction is crucial for improving autonomous vehicles behaviour}
 \onslide<2->{\item Could avoid situations seen in the ethical lectures}
 \end{itemize}
@@ -295,19 +296,24 @@ The fourth case ensure that coordinates and speeds are not predicted independent
 \frametitle{Results: Introduction}
 To calculate the correctness of the prediction two indicators are used:
 \begin{enumerate}
+\justifying
 \item The final displacement error: $e_{fin} = \sqrt{(X_{n}-X_{pred,n})^2}$
 \item The mean displacement error: $e_{fin} = \sqrt{\frac{\sum_{i=0}^n(X_{gt,i}-X_{pred,i})^2}{(n)}}$
 \end{enumerate}
-Depending on the inputs two ways are possible to find the predicted coordinates:
+\vspace{0.5cm}
+
+Depending on the inputs two ways are possible to find the predicted coordinates:\\
 \begin{enumerate}
+\justifying
 \item If the coordinates are predicted: directly use them
 \item If the velocities are predicted: $X_{t} = X_{t-1} + V_{t}\cdot 0.4$, with $0.4$ the time between two frames in seconds
 \end{enumerate}
 Results for both models: 
-\begin{itemize}
+\begin{enumerate}
+\justifying
 \item 3 Types of trajectory defined: Static, linear and non-linear trajectories
-\item Mean and Final displacements
-\end{itemize}
+\item Mean and final displacement errors for the three type and for the all test set.
+\end{enumerate}
 
 \end{frame}
 
