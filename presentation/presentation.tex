@@ -96,7 +96,7 @@
 %%
 
 \title{DAIT Project}
-\subtitle{Trajectory Preduiction for Human-Human Interaction}
+\subtitle{Trajectory Prediction for Human-Human Interaction}
 \author{Rodolphe Farrando, Romain Gratier}%\\[1cm] {\small Supervisors: Nicholas Molyneaux, Gaël Lederrey, Michel Bierlaire}}
 \institute{EPFL}
 \date{23.05.2018}
@@ -109,12 +109,12 @@
   \thispagestyle{empty}
 \end{frame}
 
-\begin{frame}[noframenumbering]{Table of contents}
-\thispagestyle{empty}
-  \setbeamertemplate{section in toc}[sections numbered]
-  \vspace{0.6cm}
-  \tableofcontents[hideallsubsections]
-\end{frame}
+%\begin{frame}[noframenumbering]{Table of contents}
+%\thispagestyle{empty}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \vspace{0.6cm}
+%  \tableofcontents[hideallsubsections]
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -188,7 +188,7 @@ The preprocessing is divided in 4 steps:
 \onslide<1->{\item We isolate each trajectory along with his interaction, that is the other trajectories that are around within the same frames}
 \onslide<2->{\item We normalize the trajectories such that the first point is at $(0,0)$ and the second is at $(0,y_1)$}
 \onslide<3->{\item We calculate axis velocities $V_x$ and $V_y$}
-\onslide<4->{\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise zeros are added}
+\onslide<4->{\item For each frame, if there is a interacting pedestrian we add its coordinates and speed otherwise we add zeros}
 \onslide<5->{\item Data augmentation (flip and add noise) cf. last slide}
 \end{enumerate}
 \begin{center}
@@ -230,7 +230,9 @@ We have a file with:
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
-        \vdots     &  \vdots  &  \vdots &  \vdots &  \vdots &  \vdots \\ \hline
+        0     &  i  &  0 &  0 &  0 &  0 \\ \hline
+        10     &  i  &  0 &  $y$ &  0 &  $V_x$ \\ \hline
+        \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
 \end{tabular}
 \end{table}
 \vspace{0.6cm}

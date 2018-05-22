@@ -1,8 +1,8 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {english}
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Data}{8}{0}{2}
-\beamer@sectionintoc {3}{Models}{17}{0}{3}
-\beamer@sectionintoc {4}{Results}{20}{0}{4}
-\beamer@sectionintoc {5}{Representation}{24}{0}{5}
-\beamer@sectionintoc {6}{Annex}{28}{0}{6}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Data}{7}{0}{2}
+\beamer@sectionintoc {3}{Models}{16}{0}{3}
+\beamer@sectionintoc {4}{Results}{19}{0}{4}
+\beamer@sectionintoc {5}{Representation}{23}{0}{5}
+\beamer@sectionintoc {6}{Annex}{27}{0}{6}
