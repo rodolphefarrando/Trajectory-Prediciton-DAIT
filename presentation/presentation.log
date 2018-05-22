@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  22 MAY 2018 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  22 MAY 2018 11:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,7 +1417,12 @@ Overfull \vbox (0.90866pt too high) detected at line 288
 
 ] [21
 
-] [22
+]
+Overfull \hbox (1.5122pt too wide) in paragraph at lines 343--343
+[]\OT1/cmss/m/n/7 [] [] 
+ []
+
+[22
 
 ] [23
 
@@ -1441,8 +1446,7 @@ Overfull \vbox (0.90866pt too high) detected at line 288
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 368.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 368.
-
-(./presentation.aux)
+ (./presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 368.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 368.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
@@ -1480,7 +1484,7 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (27 pages, 1825540 bytes).
+Output written on presentation.pdf (27 pages, 1825918 bytes).
 PDF statistics:
  331 PDF objects out of 1000 (max. 8388607)
  251 compressed objects within 3 object streams
