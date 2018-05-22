@@ -5,3 +5,4 @@
 \beamer@sectionintoc {3}{Models}{17}{0}{3}
 \beamer@sectionintoc {4}{Results}{20}{0}{4}
 \beamer@sectionintoc {5}{Representation}{24}{0}{5}
+\beamer@sectionintoc {6}{Annex}{28}{0}{6}
