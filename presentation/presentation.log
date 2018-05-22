@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1566,35 +1566,35 @@ Package pdftex.def Info: figure/examplepres.pdf used on input line 248.
 
 ] [15
 
-] [16
-
 ]
-<figure/CNN.pdf, id=182, 519.30885pt x 352.4098pt>
+<figure/CNN.pdf, id=176, 519.30885pt x 352.4098pt>
 File: figure/CNN.pdf Graphic file (type pdf)
  <use figure/CNN.pdf>
-Package pdftex.def Info: figure/CNN.pdf used on input line 284.
+Package pdftex.def Info: figure/CNN.pdf used on input line 259.
 (pdftex.def)             Requested size: 181.76082pt x 123.34528pt.
 
-[17
+[16
 
- <./figure/CNN.pdf>] <figure/manytomany.png, id=207, 688.5725pt x 642.4pt>
+ <./figure/CNN.pdf>] <figure/manytomany.png, id=201, 688.5725pt x 642.4pt>
 File: figure/manytomany.png Graphic file (type png)
 
 <use figure/manytomany.png>
-Package pdftex.def Info: figure/manytomany.png used on input line 292.
+Package pdftex.def Info: figure/manytomany.png used on input line 267.
 (pdftex.def)             Requested size: 172.1427pt x 160.59961pt.
 
-Overfull \vbox (0.90866pt too high) detected at line 292
+Overfull \vbox (0.90866pt too high) detected at line 267
  []
 
-[18
+[17
 
- <./figure/manytomany.png>] [19
+ <./figure/manytomany.png>] [18
+
+] [19
 
 ] [20
 
 ]
-Overfull \hbox (0.5009pt too wide) in paragraph at lines 353--353
+Overfull \hbox (0.5009pt too wide) in paragraph at lines 343--343
 []\OT1/cmss/m/n/7 [] [] 
  []
 
@@ -1608,52 +1608,52 @@ Overfull \hbox (0.5009pt too wide) in paragraph at lines 353--353
 File: figure/fig_510.pdf Graphic file (type pdf)
 
 <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 373.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 
 <figure/fig_1552.pdf, id=248, 712.74092pt x 430.48926pt>
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 
 <figure/fig_1621.pdf, id=249, 712.74092pt x 426.37231pt>
 File: figure/fig_1621.pdf Graphic file (type pdf)
 
 <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
  [24
 
  <./figure/fig_510.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 373.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
  [25
 
  <./figure/fig_1552.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 373.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
  <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 383.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 373.
 (pdftex.def)             Requested size: 285.09131pt x 170.5459pt.
 
 [26
@@ -1679,7 +1679,7 @@ ng> [27
 File: figure/loss_coord.pdf Graphic file (type pdf)
 
 <use figure/loss_coord.pdf>
-Package pdftex.def Info: figure/loss_coord.pdf used on input line 435.
+Package pdftex.def Info: figure/loss_coord.pdf used on input line 425.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [31
 
@@ -1688,7 +1688,7 @@ Package pdftex.def Info: figure/loss_coord.pdf used on input line 435.
 File: figure/loss_speed.pdf Graphic file (type pdf)
 
 <use figure/loss_speed.pdf>
-Package pdftex.def Info: figure/loss_speed.pdf used on input line 443.
+Package pdftex.def Info: figure/loss_speed.pdf used on input line 433.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [32
 
@@ -1697,7 +1697,7 @@ Package pdftex.def Info: figure/loss_speed.pdf used on input line 443.
 File: figure/loss_2Loss_ND.pdf Graphic file (type pdf)
 
 <use figure/loss_2Loss_ND.pdf>
-Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 451.
+Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 441.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [33
 
@@ -1706,10 +1706,9 @@ Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 451.
 File: figure/loss_full_last_data.pdf Graphic file (type pdf)
 
 <use figure/loss_full_last_data.pdf>
-Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 459.
+Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 449.
 
 (pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
-Package atenddvi Info: Last page = 34.
  [34
 
  <./figure/loss_full_last_data.pdf>]
@@ -1722,12 +1721,21 @@ Package atenddvi Info: Last page = 34.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 462.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 452.
 
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
+(./presentation.aux
+
+Package atenddvi Warning: Rerun LaTeX, last page not yet found.
+
+
+Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+(animate)                @ Rerun to get internal references right! @
+(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: A565F3F2D36E2E47B6BAD88B3474BA6E;258.
 
@@ -1738,13 +1746,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 462.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
  ) 
 Here is how much of TeX's memory you used:
- 31064 strings out of 493014
- 624625 string characters out of 6133351
- 780018 words of memory out of 5000000
- 33889 multiletter control sequences out of 15000+600000
+ 31066 strings out of 493014
+ 624641 string characters out of 6133351
+ 779933 words of memory out of 5000000
+ 33891 multiletter control sequences out of 15000+600000
  13318 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,86p,10395b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1763,10 +1774,10 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (34 pages, 2347338 bytes).
+Output written on presentation.pdf (34 pages, 2346534 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
+ 768 PDF objects out of 1000 (max. 8388607)
+ 380 compressed objects within 4 object streams
  75 named destinations out of 1000 (max. 500000)
- 577 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 569 words of extra memory for PDF output out of 10000 (max. 10000000)
 

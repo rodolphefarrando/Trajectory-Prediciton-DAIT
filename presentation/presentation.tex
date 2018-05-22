@@ -97,7 +97,7 @@
 %%
 
 \title{DAIT Project}
-\subtitle{Trajectory Prediction for Human-Human Interaction}
+\subtitle{Pedestrian trajectory prediction}
 \author{Rodolphe Farrando, Romain Gratier}%\\[1cm] {\small Supervisors: Nicholas Molyneaux, Gaël Lederrey, Michel Bierlaire}}
 \institute{EPFL}
 \date{23.05.2018}
@@ -217,8 +217,9 @@ We have a file with:
 \begin{itemize}
 \justifying
 
-\item Train on the 10 first coordinates
+\item Train on the 10 first coordinates and speed and their interaction
 \item Predict the next 10 
+\item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
 \end{itemize}}
 
 \end{column}%
@@ -244,33 +245,7 @@ Example of trajectory to predict
 }
 \end{column}%
 \end{columns}
-
 \end{frame}
-
-\begin{frame}
-\frametitle{Outputs structure}
-Finally our inputs have the following shape: $[10,N,4 * N_{inter}]$, with 
-\begin{itemize}
-\justifying
-\item 10: sequence length
-\item $N$: The number of data
-\item $4*N_{inter}$: 4 (being the $x$ and $y$ coordinates and $V_x$ and $V_y$ velocities) times the number of pedestrians interacting with the one of interest.
-\end{itemize}
-%\begin{itemize}
-%\item The models can predict either coordinate or speed or both
-%\item We test our two models for 4 different cases
-%\end{itemize}
-The four different cases are:
-\begin{enumerate}
-\justifying
-\item Predict coordinates with loss defines as $L_1 = (X-X_{pred})^2$ with $X = [x,y]$
-\item Predict speeds with loss defines as $L_2 = (V-V_{pred})^2$ with $V = [V_x,V_y]$ 
-\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
-\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
-\end{enumerate}
-The fourth case ensure that coordinates and speeds are not predicted independently.
-\end{frame}
-
 
 
 
@@ -308,13 +283,28 @@ Depending on the inputs two ways are possible to find the predicted coordinates:
 \item If the coordinates are predicted: directly use them
 \item If the velocities are predicted: $X_{t} = X_{t-1} + V_{t}\cdot 0.4$, with $0.4$ the time between two frames in seconds
 \end{enumerate}
-Results for both models: 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Results: Introduction}
+Four different losses are tested for each model:
 \begin{enumerate}
 \justifying
-\item 3 Types of trajectory defined: Static, linear and non-linear trajectories
-\item Mean and final displacement errors for the three type and for the all test set.
+\item Predict coordinates with loss defines as $L_1 = (X-X_{pred})^2$ with $X = [x,y]$
+\item Predict speeds with loss defines as $L_2 = (V-V_{pred})^2$ with $V = [V_x,V_y]$ 
+\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
+\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
 \end{enumerate}
-
+The fourth case ensure that coordinates and speeds are not predicted independently.\\
+\vspace{0.3cm}
+Each case is tested on three trajectory types:\\
+\begin{enumerate}
+\justifying
+\item Static
+\item Linear trajectories
+\item Non-linear trajectories
+\end{enumerate}
 \end{frame}
 
 
