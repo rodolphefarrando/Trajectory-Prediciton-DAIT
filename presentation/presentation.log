@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1594,7 +1594,7 @@ Overfull \vbox (0.90866pt too high) detected at line 291
 ] [20
 
 ]
-Overfull \hbox (0.5009pt too wide) in paragraph at lines 346--346
+Overfull \hbox (0.5009pt too wide) in paragraph at lines 347--347
 []\OT1/cmss/m/n/7 [] [] 
  []
 
@@ -1658,7 +1658,15 @@ Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
 
 [26
 
- <./figure/fig_1621.pdf>] [27
+ <./figure/fig_1621.pdf>] <./figure/gif/dyn_test-0.png> <./figure/gif/dyn_test-
+1.png> <./figure/gif/dyn_test-2.png> <./figure/gif/dyn_test-3.png> <./figure/gi
+f/dyn_test-4.png> <./figure/gif/dyn_test-5.png> <./figure/gif/dyn_test-6.png> <
+./figure/gif/dyn_test-7.png> <./figure/gif/dyn_test-8.png> <./figure/gif/dyn_te
+st-9.png> <./figure/gif/dyn_test-10.png> <./figure/gif/dyn_test-11.png> <./figu
+re/gif/dyn_test-12.png> <./figure/gif/dyn_test-13.png> <./figure/gif/dyn_test-1
+4.png> <./figure/gif/dyn_test-15.png> <./figure/gif/dyn_test-16.png> <./figure/
+gif/dyn_test-17.png> <./figure/gif/dyn_test-18.png> <./figure/gif/dyn_test-19.p
+ng> [27
 
 ] [28
 
@@ -1667,6 +1675,44 @@ Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
 ] [30
 
 ]
+<figure/loss_coord.pdf, id=539, 765.2339pt x 449.81929pt>
+File: figure/loss_coord.pdf Graphic file (type pdf)
+
+<use figure/loss_coord.pdf>
+Package pdftex.def Info: figure/loss_coord.pdf used on input line 429.
+(pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
+ [31
+
+ <./figure/loss_coord.pdf>]
+<figure/loss_speed.pdf, id=581, 765.2339pt x 449.81929pt>
+File: figure/loss_speed.pdf Graphic file (type pdf)
+
+<use figure/loss_speed.pdf>
+Package pdftex.def Info: figure/loss_speed.pdf used on input line 437.
+(pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
+ [32
+
+ <./figure/loss_speed.pdf>]
+<figure/loss_2Loss_ND.pdf, id=623, 765.2339pt x 449.81929pt>
+File: figure/loss_2Loss_ND.pdf Graphic file (type pdf)
+
+<use figure/loss_2Loss_ND.pdf>
+Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 445.
+(pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
+ [33
+
+ <./figure/loss_2Loss_ND.pdf>]
+<figure/loss_full_last_data.pdf, id=664, 746.08424pt x 449.81929pt>
+File: figure/loss_full_last_data.pdf Graphic file (type pdf)
+
+<use figure/loss_full_last_data.pdf>
+Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 453.
+
+(pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
+Package atenddvi Info: Last page = 34.
+ [34
+
+ <./figure/loss_full_last_data.pdf>]
 \tf@nav=\write6
 \openout6 = `presentation.nav'.
 
@@ -1676,20 +1722,12 @@ Package pdftex.def Info: figure/fig_1621.pdf used on input line 377.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 402.
- (./presentation.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 456.
 
-Package atenddvi Warning: Rerun LaTeX, last page not yet found.
-
-
-Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-(animate)                @ Rerun to get internal references right! @
-(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
+(./presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: A565F3F2D36E2E47B6BAD88B3474BA6E;258.
 
@@ -1700,16 +1738,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 402.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
  ) 
 Here is how much of TeX's memory you used:
- 30872 strings out of 493014
- 621421 string characters out of 6133351
+ 31064 strings out of 493014
+ 624625 string characters out of 6133351
  780018 words of memory out of 5000000
- 33735 multiletter control sequences out of 15000+600000
+ 33889 multiletter control sequences out of 15000+600000
  13318 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,86p,10395b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1728,10 +1763,10 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (30 pages, 1862474 bytes).
+Output written on presentation.pdf (34 pages, 2347308 bytes).
 PDF statistics:
- 454 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 770 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

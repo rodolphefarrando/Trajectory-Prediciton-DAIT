@@ -316,6 +316,7 @@ Results for both models:
 
 \begin{frame}
 \frametitle{Results}
+\fontsize{9pt}{5.5}\selectfont
 Linear prediction results:
 \begin{itemize}
 \item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
@@ -362,11 +363,10 @@ LSTM and linear prediction comparison:
 \section{Representation}
 
 \begin{frame}
-\frametitle{Representation}
-Examples of some trajectories:\\
+\frametitle{Representation: a few examples}
 \only<1>{Linear trajectories:}
 \only<2>{Type 3 trajectory:}
-\only<3>{We have also bad results:}
+\only<3>{But sometimes prediction fails:}
 \begin{center}
 \begin{overprint}
 \onslide<1> \centerline {\includegraphics[scale = 0.4]{figure/fig_510}}
@@ -376,27 +376,81 @@ Examples of some trajectories:\\
 \end{center}
 \end{frame}
 
-%\begin{frame}
-%\frametitle{Dynamic Representation}
-%  \animategraphics[loop,controls,width=\linewidth]{4}{./figure/gif/dyn_test-}{0}{19}
-%\end{frame}
+\begin{frame}
+\frametitle{Dynamic Representation}
+  \animategraphics[loop,controls,width=\linewidth]{4}{./figure/gif/dyn_test-}{0}{19}
+\end{frame}
 
 \begin{frame}
 \frametitle{Conclusion}
+What can we conclude ?\\
+\begin{itemize}
+\item CNN is not well structured for this application
+\item LSTM gives better trajectories compare to the other models
+\item The statics trajectories are the most difficult to predict
+\end{itemize}
 
+What can be debated ?
+\begin{itemize}
+\item The inputs of the CNN model can be improved
+\item The Inputs can be discussed concerning the initialisation of the matrix of interactions
+\item Our data augmentation can be discussed
+\end{itemize}
 
 \end{frame}
 
+%%%%%%%%%%%%%%%% ANNEX %%%%%%%%%%%%%%%%
 \section{Annex}
 
 \begin{frame}
-\frametitle{Loss Functions}
-
+\frametitle{Data Augmentation}
+The data augmentation is divided in two steps:
+\begin{enumerate}
+\justifying
+\item Flipping the trajectory, i.e $x=-x$ and $y=y$
+\item Add noise to all points (except two first): $0<\epsilon_x<0.1$ and $0<\epsilon_y<0.1$. Only for type 2 and 3 trajectory, otherwise for type 1, trajectory become unrealistic.
+\end{enumerate}
+What is the problem:
+\begin{enumerate}
+\justifying
+\item Flipping trajectories can remove behavioural pattern. If pedestrians tend to deviate on the right (or left) to avoid interaction, this pattern is lost. 
+\item Adding noise doesn't change much the trajectory: two very similar trajectories can be in the train AND in the test set.
+\end{enumerate}
+The first problem is hard to overcome. The solution would be to not flip the trajectory $\Rightarrow$ we tried and with less data, we have worst prediction.\\
+The second problem is not a really one. Trajectory are often similar for a lot of them, the issue can be problematic for "unconventional" trajectories, and the model can "learn by heart" the output.
 \end{frame}
 
 \begin{frame}
-\frametitle{Data Augmentation}
-
+\frametitle{Loss Functions: Coordinates model}
+Coordinates model:
+\begin{figure}
+\includegraphics[scale = 0.4]{figure/loss_coord}
+\end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{Loss Functions: Speed model}
+Speed model:
+\begin{figure}
+\includegraphics[scale = 0.4]{figure/loss_speed}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Loss Functions: 2 Loss model}
+2 Loss model:
+\begin{figure}
+\includegraphics[scale = 0.4]{figure/loss_2Loss_ND}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Loss Functions: 3 Loss model}
+3 Loss model:
+\begin{figure}
+\includegraphics[scale = 0.4]{figure/loss_full_last_data}
+\end{figure}
+\end{frame}
+
 
 \end{document}
