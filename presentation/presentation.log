@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  23 MAY 2018 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  23 MAY 2018 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1588,7 +1588,7 @@ Overfull \vbox (5.27533pt too high) detected at line 266
 ] [21
 
 ]
-Overfull \hbox (5.9726pt too wide) in paragraph at lines 342--342
+Overfull \hbox (5.9726pt too wide) in paragraph at lines 341--341
 []\OT1/cmss/m/n/7 [] [] 
  []
 
@@ -1602,52 +1602,52 @@ Overfull \hbox (5.9726pt too wide) in paragraph at lines 342--342
 File: figure/fig_510.pdf Graphic file (type pdf)
 
 <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 
 <figure/fig_1552.pdf, id=253, 712.74092pt x 430.48926pt>
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 370.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 
 <figure/fig_1621.pdf, id=254, 709.87082pt x 426.37231pt>
 File: figure/fig_1621.pdf Graphic file (type pdf)
 
 <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
  [25
 
  <./figure/fig_510.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 370.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
  [26
 
  <./figure/fig_1552.pdf>]
 File: figure/fig_510.pdf Graphic file (type pdf)
  <use figure/fig_510.pdf>
-Package pdftex.def Info: figure/fig_510.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_510.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 File: figure/fig_1552.pdf Graphic file (type pdf)
  <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 370.
 (pdftex.def)             Requested size: 285.09131pt x 172.19264pt.
 File: figure/fig_1621.pdf Graphic file (type pdf)
  <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 371.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 370.
 (pdftex.def)             Requested size: 283.9433pt x 170.5459pt.
 
 [27
@@ -1673,7 +1673,7 @@ ng> [28
 File: figure/hyperparam.pdf Graphic file (type pdf)
 
 <use figure/hyperparam.pdf>
-Package pdftex.def Info: figure/hyperparam.pdf used on input line 423.
+Package pdftex.def Info: figure/hyperparam.pdf used on input line 422.
 (pdftex.def)             Requested size: 300.98166pt x 179.92453pt.
  [32
 
@@ -1692,7 +1692,7 @@ figure/gif2/dyn_test_2-11.png> <./figure/gif2/dyn_test_2-12.png> <./figure/gif2
 File: figure/loss_coord.pdf Graphic file (type pdf)
 
 <use figure/loss_coord.pdf>
-Package pdftex.def Info: figure/loss_coord.pdf used on input line 437.
+Package pdftex.def Info: figure/loss_coord.pdf used on input line 436.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [34
 
@@ -1701,7 +1701,7 @@ Package pdftex.def Info: figure/loss_coord.pdf used on input line 437.
 File: figure/loss_speed.pdf Graphic file (type pdf)
 
 <use figure/loss_speed.pdf>
-Package pdftex.def Info: figure/loss_speed.pdf used on input line 445.
+Package pdftex.def Info: figure/loss_speed.pdf used on input line 444.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
  [35
 
@@ -1710,19 +1710,19 @@ Package pdftex.def Info: figure/loss_speed.pdf used on input line 445.
 File: figure/loss_2Loss_ND.pdf Graphic file (type pdf)
 
 <use figure/loss_2Loss_ND.pdf>
-Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 453.
+Package pdftex.def Info: figure/loss_2Loss_ND.pdf used on input line 452.
 (pdftex.def)             Requested size: 306.08813pt x 179.92453pt.
-Package atenddvi Info: Last page = 36.
  [36
 
  <./figure/loss_2Loss_ND.pdf>]
-<figure/loss_full_last_data.pdf, id=863, 746.08424pt x 449.81929pt>
+<figure/loss_full_last_data.pdf, id=861, 746.08424pt x 449.81929pt>
 File: figure/loss_full_last_data.pdf Graphic file (type pdf)
 
 <use figure/loss_full_last_data.pdf>
-Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 461.
+Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 460.
 
 (pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
+Package atenddvi Info: Last page = 37.
  [37
 
  <./figure/loss_full_last_data.pdf>]
@@ -1735,21 +1735,12 @@ Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 461.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 464.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 464.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 463.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 463.
 
-(./presentation.aux
-
-Package atenddvi Warning: Rerun LaTeX, last page has changed.
-
-
-Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-(animate)                @ Rerun to get internal references right! @
-(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 464.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 464.
+(./presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 463.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 463.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: A565F3F2D36E2E47B6BAD88B3474BA6E;258.
 
@@ -1760,16 +1751,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 464.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 463.
  ) 
 Here is how much of TeX's memory you used:
- 31181 strings out of 493014
- 627175 string characters out of 6133351
+ 31183 strings out of 493014
+ 627191 string characters out of 6133351
  779933 words of memory out of 5000000
- 33975 multiletter control sequences out of 15000+600000
+ 33977 multiletter control sequences out of 15000+600000
  13318 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,86p,10490b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1788,7 +1776,7 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (37 pages, 2727112 bytes).
+Output written on presentation.pdf (37 pages, 2728254 bytes).
 PDF statistics:
  971 PDF objects out of 1000 (max. 8388607)
  458 compressed objects within 5 object streams
