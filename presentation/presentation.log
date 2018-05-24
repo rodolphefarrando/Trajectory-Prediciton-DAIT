@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  22 MAY 2018 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  22 MAY 2018 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1709,6 +1709,7 @@ File: figure/loss_full_last_data.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 449.
 
 (pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
+Package atenddvi Info: Last page = 34.
  [34
 
  <./figure/loss_full_last_data.pdf>]
@@ -1724,16 +1725,7 @@ Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 449.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 452.
 
-(./presentation.aux
-
-Package atenddvi Warning: Rerun LaTeX, last page not yet found.
-
-
-Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-(animate)                @ Rerun to get internal references right! @
-(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
-
-)
+(./presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
@@ -1746,16 +1738,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
  ) 
 Here is how much of TeX's memory you used:
- 31066 strings out of 493014
- 624641 string characters out of 6133351
+ 31064 strings out of 493014
+ 624625 string characters out of 6133351
  779933 words of memory out of 5000000
- 33891 multiletter control sequences out of 15000+600000
+ 33889 multiletter control sequences out of 15000+600000
  13318 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,86p,10395b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1774,10 +1763,10 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentation.pdf (34 pages, 2346534 bytes).
+Output written on presentation.pdf (34 pages, 2346737 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
+ 770 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
  75 named destinations out of 1000 (max. 500000)
- 569 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 577 words of extra memory for PDF output out of 10000 (max. 10000000)
 
