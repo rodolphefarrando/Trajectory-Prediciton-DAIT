@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  22 MAY 2018 16:30
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  23 MAY 2018 10:47
->>>>>>> 5144ee8e8e6fb5a6ad2227eefd74fec610827a78
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  24 MAY 2018 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/rodolphefarrando/Documents/EPFL/Master/MA4/DAIT/Trajectory-Prediciton-
-DAIT/presentation/presentation.tex
-
-(/Users/rodolphefarrando/Documents/EPFL/Master/MA4/DAIT/Trajectory-Prediciton-D
-AIT/presentation/presentation.tex
+**presentation.tex
+(./presentation.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1726,13 +1719,8 @@ File: figure/loss_full_last_data.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/loss_full_last_data.pdf used on input line 460.
 
 (pdftex.def)             Requested size: 298.4284pt x 179.92453pt.
-<<<<<<< HEAD
-Package atenddvi Info: Last page = 34.
- [34
-=======
 Package atenddvi Info: Last page = 37.
  [37
->>>>>>> 5144ee8e8e6fb5a6ad2227eefd74fec610827a78
 
  <./figure/loss_full_last_data.pdf>]
 \tf@nav=\write6
@@ -1744,21 +1732,12 @@ Package atenddvi Info: Last page = 37.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 452.
-
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
-=======
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 463.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 463.
 
 (./presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 463.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 463.
->>>>>>> 5144ee8e8e6fb5a6ad2227eefd74fec610827a78
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: A565F3F2D36E2E47B6BAD88B3474BA6E;258.
 
@@ -1769,26 +1748,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
- ) 
-Here is how much of TeX's memory you used:
- 31064 strings out of 493014
- 624625 string characters out of 6133351
- 779933 words of memory out of 5000000
- 33889 multiletter control sequences out of 15000+600000
-=======
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 463.
  ) 
 Here is how much of TeX's memory you used:
- 31183 strings out of 493014
- 627191 string characters out of 6133351
+ 31182 strings out of 493014
+ 626908 string characters out of 6133351
  779933 words of memory out of 5000000
  33977 multiletter control sequences out of 15000+600000
->>>>>>> 5144ee8e8e6fb5a6ad2227eefd74fec610827a78
  13318 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,13n,86p,10490b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,13n,86p,10395b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
 .pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
 ex9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -1804,19 +1773,10 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-<<<<<<< HEAD
-Output written on presentation.pdf (34 pages, 2346737 bytes).
-PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
- 577 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
 Output written on presentation.pdf (37 pages, 2728254 bytes).
 PDF statistics:
  971 PDF objects out of 1000 (max. 8388607)
  458 compressed objects within 5 object streams
  81 named destinations out of 1000 (max. 500000)
  930 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 5144ee8e8e6fb5a6ad2227eefd74fec610827a78
 
