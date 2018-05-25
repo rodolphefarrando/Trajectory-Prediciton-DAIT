@@ -36,6 +36,12 @@
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 \usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage{colortbl}
+\graphicspath {{figures/}}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\usepackage{ragged2e}
 
 \begin{document}
 
@@ -53,7 +59,7 @@
 %\vspace{1cm}
 \huge \textbf{Rodolphe Farrando \& Romain Gratier}\\[0.5cm] % Author(s)
 \huge EPFL -- ENAC Faculty\\[0.4cm] % University/organization
-\Large \texttt{\{rodolphe.farrando, romain.gratier\}@epfl.ch}\\
+\Large \texttt{\{rodolphe.farrando, romain.gratierdesaint-louis\}@epfl.ch}\\
 \end{minipage}
 %
 \begin{minipage}[b]{0.25\linewidth}
@@ -74,7 +80,7 @@
 
 \begin{abstract}
 
-Sed fringilla tempus hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut elit sit amet metus lobortis consequat sit amet in libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem magna. Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing. Quisque vestibulum eros eu. Phasellus imperdiet, tortor vitae congue bibendum, felis enim sagittis lorem, et volutpat ante orci sagittis mi. Morbi rutrum laoreet semper. Morbi accumsan enim nec tortor consectetur non commodo nisi sollicitudin. Proin sollicitudin. Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh.
+In the machine learning domain, a lot of recent work have been made concerning the human trajectories forecasting. We decide to pick two of them build with the same inputs in order to challenge their results. The first model, which is obviously the most effective according the literature, is a LSTM and the second one is a CNN.
 
 \end{abstract}
 
@@ -86,138 +92,174 @@ Sed fringilla tempus hendrerit. Vestibulum ante ipsum primis in faucibus orci lu
 
 \section*{Introduction}
 
-Aliquam non lacus dolor, \textit{a aliquam quam} \cite{Smith:2012qr}. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla in nibh mauris. Donec vel ligula nisi, a lacinia arcu. Sed mi dui, malesuada vel consectetur et, egestas porta nisi. Sed eleifend pharetra dolor, et dapibus est vulputate eu. \textbf{Integer faucibus elementum felis vitae fringilla.} In hac habitasse platea dictumst. Duis tristique rutrum nisl, nec vulputate elit porta ut. Donec sodales sollicitudin turpis sed convallis. Etiam mauris ligula, blandit adipiscing condimentum eu, dapibus pellentesque risus.
+\begin{minipage}[]{0.5\linewidth}
+\centerline {\includegraphics[scale = 0.5]{figure/intro2}}
+\captionof{figure}{Application}
+\end{minipage}
+%
+\begin{minipage}[]{0.5\linewidth}
+\centering
+\begin{itemize}
+\item Trajectory prediction is crucial for improving autonomous vehicles behaviour
+\item Could avoid situations seen in the ethical lectures
+\end{itemize}
+\end{minipage}
 
-\textit{Aliquam auctor}, metus id ultrices porta, risus enim cursus sapien, quis iaculis sapien tortor sed odio. Mauris ante orci, euismod vitae tincidunt eu, porta ut neque. Aenean sapien est, viverra vel lacinia nec, venenatis eu nulla. Maecenas ut nunc nibh, et tempus libero. Aenean vitae risus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
 
 %----------------------------------------------------------------------------------------
-%	OBJECTIVES
+%	PREVIOUS WORK	
 %----------------------------------------------------------------------------------------
 
-\color{DarkSlateGray} % DarkSlateGray color for the rest of the content
+\color{DarkSlateGray} % 
 
-\section*{Main Objectives}
+\section*{Previous Work}
+\begin{center}
+\begin{minipage}[lH]{0.45\linewidth-}
+In their project, they used different components to make the structure:\\
+\begin{itemize}
+\item One LSTM per pedestrian
+\item Social Pooling
+\item Prediction per frame
+\end{itemize}
+\centerline {\includegraphics[scale = 0.5]{figure/socialLSTM}}
+\captionof{figure}{Application}
+\end{minipage}
+%
+\begin{minipage}[H]{0.45\linewidth-}
+In our project, we use used the following structures independently :\\
+\vspace{1.5cm}
+\begin{itemize}
+\item One CNN, or one LSTM
+\item Prediction per pedestrian
+\end{itemize}
+\vspace{1.5cm}
+\centerline {\includegraphics[scale = 0.6]{figure/OurModel}}
+\captionof{figure}{Application}
+\end{minipage}
+\end{center}
+%----------------------------------------------------------------------------------------
+%	DATA
+%----------------------------------------------------------------------------------------
 
+\section*{Data}
+
+The preprocessing is divided in 5 steps:
 \begin{enumerate}
-\item Lorem ipsum dolor sit amet, consectetur.
-\item Nullam at mi nisl. Vestibulum est purus, ultricies cursus volutpat sit amet, vestibulum eu.
-\item Praesent tortor libero, vulputate quis elementum a, iaculis.
-\item Phasellus a quam mauris, non varius mauris. Fusce tristique, enim tempor varius porta, elit purus commodo velit, pretium mattis ligula nisl nec ante.
-\item Ut adipiscing accumsan sapien, sit amet pretium.
-\item Estibulum est purus, ultricies cursus volutpat
-\item Nullam at mi nisl. Vestibulum est purus, ultricies cursus volutpat sit amet, vestibulum eu.
-\item Praesent tortor libero, vulputate quis elementum a, iaculis.
+\item Isolate each trajectory along with its interaction
+\item Normalize the trajectories: the first point is at $(0,0)$; the second is at $(0,y_1)$
+\item Calculate axis velocities $V_x$ and $V_y$
+\item For each frame, if there is an interacting pedestrian we add his/her coordinates and speed otherwise we add zeros
+\item Data augmentation: flip and add noise to trajectories
 \end{enumerate}
+%\begin{center}
+%\begin{overprint}
+%\onslide<1> \centerline {\includegraphics[scale = 0.25]{figure/beforerot}}
+%\onslide<2->\centerline {\includegraphics[scale = 0.25]{figure/afterrot}}
+% \end{overprint}
+%\end{center}
 
-%----------------------------------------------------------------------------------------
-%	MATERIALS AND METHODS
-%----------------------------------------------------------------------------------------
+\vspace{3cm}
 
-\section*{Materials and Methods}
+\textbf{We have a file with:} \\
 
-Fusce magna risus, molestie ut porttitor in, consectetur sed mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque consectetur blandit pellentesque. Sed odio justo, viverra nec porttitor vel, lacinia a nunc. Suspendisse pulvinar euismod arcu, sit amet accumsan enim fermentum quis. In id mauris ut dui feugiat egestas. Vestibulum ac turpis lacinia nisl commodo sagittis eget sit amet sapien.
+\begin{minipage}[]{0.5\linewidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
+        0     &  i  &  0 &  0 &  0 &  0 \\ \hline
+        10     &  i  &  0 &  $y_1$ &  0 &  $V_{y_1}$ \\ \hline
+        \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
+\end{tabular}
+\end{minipage}
+
+
+\begin{minipage}[]{0.5\linewidth}
+\begin{itemize}
+\item Pedestrians ID
+\item Frame number 
+\item Twenty sets of $x$ and $y$ coordinates per pedestrian
+\end{itemize}
+\end{minipage}
 
 %------------------------------------------------
 
-\subsection*{Mathematical Section}
+\section*{Objectives}
 
-Nulla vel nisl sed mauris auctor mollis non sed. 
-
-\begin{equation}
-E = mc^{2}
-\label{eqn:Einstein}
-\end{equation}
-
-Curabitur mi sem, pulvinar quis aliquam rutrum. (1) edf (2)
-, $\Omega=[-1,1]^3$, maecenas leo est, ornare at. $z=-1$ edf $z=1$ sed interdum felis dapibus sem. $x$ set $y$ ytruem. 
-Turpis $j$ amet accumsan enim $y$-lacina; 
-ref $k$-viverra nec porttitor $x$-lacina. 
-
-Vestibulum ac diam a odio tempus congue. Vivamus id enim nisi:
-
-\begin{eqnarray}
-\cos\bar{\phi}_k Q_{j,k+1,t} + Q_{j,k+1,x}+\frac{\sin^2\bar{\phi}_k}{T\cos\bar{\phi}_k} Q_{j,k+1} &=&\nonumber\\ 
--\cos\phi_k Q_{j,k,t} + Q_{j,k,x}-\frac{\sin^2\phi_k}{T\cos\phi_k} Q_{j,k}\label{edgek}
-\end{eqnarray}
-and
-\begin{eqnarray}
-\cos\bar{\phi}_j Q_{j+1,k,t} + Q_{j+1,k,y}+\frac{\sin^2\bar{\phi}_j}{T\cos\bar{\phi}_j} Q_{j+1,k}&=&\nonumber \\
--\cos\phi_j Q_{j,k,t} + Q_{j,k,y}-\frac{\sin^2\phi_j}{T\cos\phi_j} Q_{j,k}.\label{edgej}
-\end{eqnarray} 
-
-Nulla sed arcu arcu. Duis et ante gravida orci venenatis tincidunt. Fusce vitae lacinia metus. Pellentesque habitant morbi. $\mathbf{A}\underline{\xi}=\underline{\beta}$ Vim $\underline{\xi}$ enum nidi $3(P+2)^{2}$ lacina. Id feugain $\mathbf{A}$ nun quis; magno.
-
-%----------------------------------------------------------------------------------------
-%	RESULTS 
-%----------------------------------------------------------------------------------------
-
-\section*{Results}
-
-Donec faucibus purus at tortor egestas eu fermentum dolor facilisis. Maecenas tempor dui eu neque fringilla rutrum. Mauris \emph{lobortis} nisl accumsan. Aenean vitae risus ante.
-%
-\begin{wraptable}{l}{12cm} % Left or right alignment is specified in the first bracket, the width of the table is in the second
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\captionof{table}{\color{Green} Table caption}
-\end{wraptable}
-%
-Phasellus imperdiet, tortor vitae congue bibendum, felis enim sagittis lorem, et volutpat ante orci sagittis mi. Morbi rutrum laoreet semper. Morbi accumsan enim nec tortor consectetur non commodo nisi sollicitudin. Proin sollicitudin. Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh.
-
-Nulla ut porttitor enim. Suspendisse venenatis dui eget eros gravida tempor. Mauris feugiat elit et augue placerat ultrices. Morbi accumsan enim nec tortor consectetur non commodo. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing. Quisque vestibulum eros eu. Phasellus imperdiet, tortor vitae congue bibendum, felis enim sagittis lorem, et volutpat ante orci sagittis mi. Morbi rutrum laoreet semper. Morbi accumsan enim nec tortor consectetur non commodo nisi sollicitudin.
-
-\begin{center}\vspace{1cm}
-\includegraphics[width=0.8\linewidth]{./figure/hyperparam}
-\captionof{figure}{\color{Green} Figure caption}
-\end{center}\vspace{1cm}
-
-In hac habitasse platea dictumst. Etiam placerat, risus ac.
-
-Adipiscing lectus in magna blandit:
-
-\begin{center}\vspace{1cm}
-\begin{tabular}{l l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\captionof{table}{\color{Green} Table caption}
-\end{center}\vspace{1cm}
-
-Vivamus sed nibh ac metus tristique tristique a vitae ante. Sed lobortis mi ut arcu fringilla et adipiscing ligula rutrum. Aenean turpis velit, placerat eget tincidunt nec, ornare in nisl. In placerat.
-
-\begin{center}\vspace{1cm}
-\includegraphics[width=0.8\linewidth]{./figure/fig_1552}
-\captionof{figure}{\color{Green} Figure caption}
-\end{center}\vspace{1cm}
-
-%----------------------------------------------------------------------------------------
-%	CONCLUSIONS
-%----------------------------------------------------------------------------------------
-
-\color{SaddleBrown} % SaddleBrown color for the conclusions to make them stand out
-
-\section*{Conclusions}
-
+\begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
-\item Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh. Phasellus fermentum rutrum elementum. Nam quis justo lectus.
-\item Vestibulum sem ante, hendrerit a gravida ac, blandit quis magna.
-\item Donec sem metus, facilisis at condimentum eget, vehicula ut massa. Morbi consequat, diam sed convallis tincidunt, arcu nunc.
-\item Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
+\item Train on the 10 first coordinates and speed and their interaction
+\item Predict the next 10 
+\item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
 \end{itemize}
+\end{minipage}
 
-\color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
+\begin{minipage}[]{0.5\linewidth}
+\centerline {\includegraphics[scale = 0.6]{figure/examplepres}}
+\captionof{figure}{}
+\end{minipage}
 
+%----------------------------------------------------------------------------------------
+%	Models 
+%----------------------------------------------------------------------------------------
+
+\section*{Models}
+
+\subsection{CNN}
+
+\begin{figure}
+\includegraphics[scale = 0.35]{figure/CNN}
+\end{figure}
+\textbf{Inputs:}  sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
+\textbf{Outputs:} sequence of predicted coordinates and velocities for a trajectory of interest 
+
+\subsection{LSTM}
+
+\begin{figure}
+\includegraphics[scale = 0.23]{figure/manytomany}
+\end{figure}
+\textbf{Inputs:} sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
+\textbf{Outputs:} sequence of predicted coordinates and velocities for the trajectory of interest 
+
+
+
+%----------------------------------------------------------------------------------------
+%	Results
+%----------------------------------------------------------------------------------------
+
+\section{Results}
+\subsection{Introduction}
+To calculate the correctness of the prediction two indicators are used:
+\begin{enumerate}
+\justifying
+\item The final displacement error: $e_{fin} = \sqrt{(X_{gt,n}-X_{pred,n})^2}$
+\item The mean displacement error: $e_{mean} = \sqrt{\frac{\sum_{i=0}^n(X_{gt,i}-X_{pred,i})^2}{(n)}}$
+\end{enumerate}
+\vspace{0.5cm}
+
+Depending on the inputs two ways are possible to find the predicted coordinates:\\
+\begin{enumerate}
+\justifying
+\item If the coordinates are predicted: directly use them
+\item If the velocities are predicted: $X_{t} = X_{t-1} + V_{t}\cdot 0.4$, with $0.4$ the time between two frames in seconds
+\end{enumerate}
+
+Four different cases, that corresponds to four losses, are tested for each model:
+\begin{enumerate}
+\justifying
+\item Predict coordinates with loss defines as $L_1 = (X-X_{pred})^2$ with $X = [x,y]$
+\item Predict speeds with loss defines as $L_2 = (V-V_{pred})^2$ with $V = [V_x,V_y]$ 
+\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
+\item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
+\end{enumerate}
+\vspace{0.3cm}
+Test set separate in three trajectory types:\\
+\begin{enumerate}
+\justifying
+\item Static
+\item Linear trajectories
+\item Non-linear trajectories
+\end{enumerate}
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
