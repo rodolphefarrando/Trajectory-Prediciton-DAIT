@@ -1401,31 +1401,30 @@ File: figure/intro2.png Graphic file (type png)
 Package pdftex.def Info: figure/intro2.png used on input line 139.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
 
+! Misplaced alignment tab character &.
+<argument> ...l machines lecture, Y. EL OUAZZANI &
+                                                   J. HAAN}, 2018
+l.139 \end{frame}
+                 
+? 
+! Emergency stop.
+<argument> ...l machines lecture, Y. EL OUAZZANI &
+                                                   J. HAAN}, 2018
+l.139 \end{frame}
+                 
+End of file on the terminal!
 
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 139.
-
-[3
-
-]
-File: figure/intro1.png Graphic file (type png)
- <use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 139.
-(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
-File: figure/intro2.png Graphic file (type png)
- <use figure/intro2.png>
-Package pdftex.def Info: figure/intro2.png used on input line 139.
-(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
- [4
-
- <./figure/intro1.png>]
-File: figure/intro1.png Graphic file (type png)
-
-<use figure/intro1.png>
-Package pdftex.def Info: figure/intro1.png used on input line 139.
-(pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
-File: figure/intro2.png Graphic file (type png)
- <use figure/intro2.png>
+ 
+Here is how much of TeX's memory you used:
+ 30694 strings out of 493014
+ 618380 string characters out of 6133351
+ 762933 words of memory out of 5000000
+ 33629 multiletter control sequences out of 15000+600000
+ 10687 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,9n,86p,10490b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
+ure/intro2.png>
 Package pdftex.def Info: figure/intro2.png used on input line 139.
 (pdftex.def)             Requested size: 193.68755pt x 149.68225pt.
  [5
