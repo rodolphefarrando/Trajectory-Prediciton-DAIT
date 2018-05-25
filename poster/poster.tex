@@ -42,6 +42,8 @@
 \graphicspath {{figures/}}
 \usepackage[font=scriptsize,labelfont=bf]{caption}
 \usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+
 
 \begin{document}
 
@@ -260,6 +262,38 @@ Test set separate in three trajectory types:\\
 \item Linear trajectories
 \item Non-linear trajectories
 \end{enumerate}
+
+\subsection{Table}
+
+\fontsize{9pt}{5.5}\selectfont
+Results with linear prediction:
+\begin{itemize}
+\item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
+\item Type 2: \emph{Mean} = 0.541, \emph{Final} = 0.93
+\item Type 3: \emph{Mean} = 0.651, \emph{Final} = 1.457
+\item Total: \emph{Mean} = 0.512, \emph{Final} = 0.982 
+
+\end{itemize}
+\fontsize{7pt}{8.2}\selectfont
+\begin{table}[]
+\centering
+%\begin{adjustwidth}{-2em}{-2em}
+\begin{tabular}{cc|c|c|c|c|c|c|c|c|}
+\cline{3-10}
+\multicolumn{1}{l}{}                                     &                & \multicolumn{4}{c|}{\textbf{CNN}}                                    & \multicolumn{4}{c|}{\textbf{LSTM}}                                                          \\ \cline{3-10} 
+                                                         &                & \textbf{Type 1} & \textbf{Type 2} & \textbf{Type 3} & \textbf{Total} & \textbf{Type 1} & \textbf{Type 2} & \textbf{Type 3} & \textbf{Total}                        \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &4.696                 & 5.144                &4.674                 &4.176                & 1.309            & 0.777           & 0.862           & 0.877                                 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Coord.}}} & \textbf{Final} &10.246                 & 7.009                &10.501                 &5.602                & 1.385           & 0.92           & 1.108           & 1.037                                \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.567                 &5.133                 &1.911                 &4.17                & 0.726           & 0.573           & 0.651           & 0.616 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Speed}}} & \textbf{Final} &0.77                 &6.971                 &3.882                 &5.587                & 1.412           & 1.045           & 1.231           & 1.148 \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &1.269      &5.134                 &1.762                 &{\color[HTML]{FE0000} \textbf{4.163}}                & 0.695           & 0.532           & 0.627           &  {\color[HTML]{FE0000} \textbf{0.581}}                                 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Losses}}} & \textbf{Final} &2.727                 &6.978                 &3.546                 &{\color[HTML]{FE0000} \textbf{5.57}}                & 1.302           & 0.963           & 1.2           &  {\color[HTML]{FE0000} \textbf{1.076}}                                 \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.549                 &5.135                 &3.829                 &4.163                & 0.748           & 0.607           & 0.681           & 0.647                                  \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Losses}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
+\end{tabular}
+%\end{adjustwidth}
+\end{table}
+
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
