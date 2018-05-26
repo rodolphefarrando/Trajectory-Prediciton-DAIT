@@ -21,6 +21,17 @@
 
 \documentclass[a0,portrait]{a0poster}
 
+
+\usepackage{geometry}
+ \geometry{
+a0paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom = 20mm
+ }
+
+
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
 \columnsep=100pt % This is the amount of white space between the columns in the poster
 \columnseprule=3pt % This is the thickness of the black line between the columns in the poster
@@ -43,6 +54,8 @@
 \usepackage[font=scriptsize,labelfont=bf]{caption}
 \usepackage{ragged2e}
 \usepackage[T1]{fontenc}
+\usepackage{multirow}
+
 
 
 \begin{document}
@@ -78,34 +91,34 @@
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\color{Navy} % Navy color for the abstract
+\color{DarkSlateGray}% Navy color for the abstract
 
-\begin{abstract}
+% \begin{abstract}
 
-In the machine learning domain, a lot of recent work have been made concerning the human trajectories forecasting. We decide to pick two of them build with the same inputs in order to challenge their results. The first model, which is obviously the most effective according the literature, is a LSTM and the second one is a CNN.
+% In the machine learning domain, a lot of recent work have been made concerning the human trajectories forecasting. We decide to pick two of them build with the same inputs in order to challenge their results. The first model, which is obviously the most effective according the literature, is a LSTM and the second one is a CNN.
 
-\end{abstract}
+% \end{abstract}
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\color{SaddleBrown} % SaddleBrown color for the introduction
+\color{DarkSlateGray} % SaddleBrown color for the introduction
 
 \section*{Introduction}
 
-\begin{minipage}[]{0.5\linewidth}
-\centerline {\includegraphics[scale = 0.5]{figure/intro2}}
-\captionof{figure}{Application}
-\end{minipage}
-%
-\begin{minipage}[]{0.5\linewidth}
-\centering
+\begin{center}
+
+\centerline{\includegraphics[scale = 0.8]{figure/intro2}}
+
+\end{center}
+
+
 \begin{itemize}
+	\justifying
 \item Trajectory prediction is crucial for improving autonomous vehicles behaviour
 \item Could avoid situations seen in the ethical lectures
 \end{itemize}
-\end{minipage}
 
 
 %----------------------------------------------------------------------------------------
@@ -115,9 +128,8 @@ In the machine learning domain, a lot of recent work have been made concerning t
 \color{DarkSlateGray} % 
 
 \section*{Previous Work}
-\begin{center}
-\begin{minipage}[lH]{0.45\linewidth-}
 In their project, they used different components to make the structure:\\
+\begin{center}
 \begin{itemize}
 \item One LSTM per pedestrian
 \item Social Pooling
@@ -125,11 +137,11 @@ In their project, they used different components to make the structure:\\
 \end{itemize}
 \centerline {\includegraphics[scale = 0.5]{figure/socialLSTM}}
 \captionof{figure}{Application}
-\end{minipage}
+\end{center}
 %
-\begin{minipage}[H]{0.45\linewidth-}
+\section*{Idea for our Models}
 In our project, we use used the following structures independently :\\
-\vspace{1.5cm}
+\begin{center}
 \begin{itemize}
 \item One CNN, or one LSTM
 \item Prediction per pedestrian
@@ -137,7 +149,6 @@ In our project, we use used the following structures independently :\\
 \vspace{1.5cm}
 \centerline {\includegraphics[scale = 0.6]{figure/OurModel}}
 \captionof{figure}{Application}
-\end{minipage}
 \end{center}
 %----------------------------------------------------------------------------------------
 %	DATA
@@ -153,19 +164,21 @@ The preprocessing is divided in 5 steps:
 \item For each frame, if there is an interacting pedestrian we add his/her coordinates and speed otherwise we add zeros
 \item Data augmentation: flip and add noise to trajectories
 \end{enumerate}
-%\begin{center}
-%\begin{overprint}
-%\onslide<1> \centerline {\includegraphics[scale = 0.25]{figure/beforerot}}
-%\onslide<2->\centerline {\includegraphics[scale = 0.25]{figure/afterrot}}
-% \end{overprint}
-%\end{center}
+\vspace{1cm}
+Representation of a trajectory:\\
+\centerline {\includegraphics[scale = 0.8]{figure/afterrot}}
 
 \vspace{3cm}
-
-\textbf{We have a file with:} \\
-
+Final shape of the data:\\
 \begin{minipage}[]{0.5\linewidth}
-\centering
+\begin{itemize}
+\item Pedestrians ID
+\item Frame number 
+\item Twenty sets of $x$ and $y$ coordinates per pedestrian
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
@@ -174,56 +187,40 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
         \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
 \end{tabular}
 \end{minipage}
-
-
-\begin{minipage}[]{0.5\linewidth}
-\begin{itemize}
-\item Pedestrians ID
-\item Frame number 
-\item Twenty sets of $x$ and $y$ coordinates per pedestrian
-\end{itemize}
-\end{minipage}
-
 %------------------------------------------------
 
 \section*{Objectives}
 
-\begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
 \item Train on the 10 first coordinates and speed and their interaction
 \item Predict the next 10 
 \item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
 \end{itemize}
-\end{minipage}
 
-\begin{minipage}[]{0.5\linewidth}
-\centerline {\includegraphics[scale = 0.6]{figure/examplepres}}
+\centerline {\includegraphics[width=0.3\textwidth]{figure/examplepres}}
 \captionof{figure}{}
-\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	Models 
 %----------------------------------------------------------------------------------------
 
 \section*{Models}
-
-\subsection{CNN}
-
-\begin{figure}
-\includegraphics[scale = 0.35]{figure/CNN}
-\end{figure}
-\textbf{Inputs:}  sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
-\textbf{Outputs:} sequence of predicted coordinates and velocities for a trajectory of interest 
-
-\subsection{LSTM}
-
-\begin{figure}
-\includegraphics[scale = 0.23]{figure/manytomany}
-\end{figure}
 \textbf{Inputs:} sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
-\textbf{Outputs:} sequence of predicted coordinates and velocities for the trajectory of interest 
+\textbf{Outputs:} sequence of predicted coordinates and velocities for the trajectory of interest.\\
 
+\vspace{1.5cm}
 
+\begin{minipage}[]{0.5\linewidth}
+\subsection*{CNN}
+\centerline {\includegraphics[width=0.6\textwidth]{figure/CNN}}
+\vspace{3cm}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+\subsection*{LSTM}
+
+\centerline {\includegraphics[width=0.6\textwidth]{figure/manytomany}}
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	Results
@@ -265,19 +262,16 @@ Test set separate in three trajectory types:\\
 
 \subsection{Table}
 
-\fontsize{9pt}{5.5}\selectfont
 Results with linear prediction:
 \begin{itemize}
 \item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
 \item Type 2: \emph{Mean} = 0.541, \emph{Final} = 0.93
 \item Type 3: \emph{Mean} = 0.651, \emph{Final} = 1.457
 \item Total: \emph{Mean} = 0.512, \emph{Final} = 0.982 
-
 \end{itemize}
-\fontsize{7pt}{8.2}\selectfont
-\begin{table}[]
-\centering
-%\begin{adjustwidth}{-2em}{-2em}
+\vspace{1cm}
+
+\begin{center}
 \begin{tabular}{cc|c|c|c|c|c|c|c|c|}
 \cline{3-10}
 \multicolumn{1}{l}{}                                     &                & \multicolumn{4}{c|}{\textbf{CNN}}                                    & \multicolumn{4}{c|}{\textbf{LSTM}}                                                          \\ \cline{3-10} 
@@ -291,8 +285,7 @@ Results with linear prediction:
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.549                 &5.135                 &3.829                 &4.163                & 0.748           & 0.607           & 0.681           & 0.647                                  \\ \cline{2-10} 
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Losses}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
 \end{tabular}
-%\end{adjustwidth}
-\end{table}
+\end{center}
 
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
@@ -310,15 +303,6 @@ Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed 
 \bibliographystyle{plain} % Plain referencing style
 \bibliography{sample} % Use the example bibliography file sample.bib
 
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
-
-\section*{Acknowledgements}
-
-Etiam fermentum, arcu ut gravida fringilla, dolor arcu laoreet justo, ut imperdiet urna arcu a arcu. Donec nec ante a dui tempus consectetur. Cras nisi turpis, dapibus sit amet mattis sed, laoreet.
-
-%----------------------------------------------------------------------------------------
 
 \end{multicols}
 \end{document}
