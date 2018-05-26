@@ -107,15 +107,10 @@ a0paper,
 
 \section*{Introduction}
 
-\begin{center}
-
-\centerline{\includegraphics[scale = 0.8]{figure/intro2}}
-
-\end{center}
-
-
 \begin{itemize}
 	\justifying
+\item
+\item
 \item Trajectory prediction is crucial for improving autonomous vehicles behaviour
 \item Could avoid situations seen in the ethical lectures
 \end{itemize}
@@ -128,33 +123,39 @@ a0paper,
 \color{DarkSlateGray} % 
 
 \section*{Previous Work}
-In their project, they used different components to make the structure:\\
-\begin{center}
+Referecnce\\
+\begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
-\item One LSTM per pedestrian
-\item Social Pooling
-\item Prediction per frame
+\justifying
+\item The prediction are done per frame: the goal is to determine multiple trajectory at the same time
+\item Introduction of a social pooling characteristics: if two pedestrian are side-by-side, they are grouped together
 \end{itemize}
-\centerline {\includegraphics[scale = 0.5]{figure/socialLSTM}}
-\captionof{figure}{Application}
-\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+\centerline {\includegraphics[scale = 0.35]{figure/socialLSTM}}
+\end{minipage}
 %
 \section*{Idea for our Models}
-In our project, we use used the following structures independently :\\
-\begin{center}
+\begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
-\item One CNN, or one LSTM
-\item Prediction per pedestrian
+\justifying
+\item Instead of focusing on frames, prediction focus on one pedestrian
+\item Special effort is put on pre-processing to make learning easier
 \end{itemize}
-\vspace{1.5cm}
-\centerline {\includegraphics[scale = 0.6]{figure/OurModel}}
-\captionof{figure}{Application}
-\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+\centerline {\includegraphics[scale = 0.4]{figure/OurModel}}
+\end{minipage}
 %----------------------------------------------------------------------------------------
 %	DATA
 %----------------------------------------------------------------------------------------
 
-\section*{Data}
+\section*{Pre-processing}
+
+\textbf{Goal:} Normalize data such that every trajectory begin the same way, the model should learn more easily. \\
+\vspace{1cm}
 
 The preprocessing is divided in 5 steps:
 \begin{enumerate}
@@ -165,9 +166,9 @@ The preprocessing is divided in 5 steps:
 \item Data augmentation: flip and add noise to trajectories
 \end{enumerate}
 \vspace{1cm}
-Representation of a trajectory:\\
-\centerline {\includegraphics[scale = 0.8]{figure/afterrot}}
 
+\centerline {\includegraphics[width=0.2\textwidth]{figure/afterrot}}
+\captionof{figure}{Example of one trajectory after pre-processing}
 \vspace{3cm}
 Final shape of the data:\\
 \begin{minipage}[]{0.5\linewidth}
@@ -197,8 +198,7 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 \item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
 \end{itemize}
 
-\centerline {\includegraphics[width=0.3\textwidth]{figure/examplepres}}
-\captionof{figure}{}
+\centerline {\includegraphics[width=0.2\textwidth]{figure/examplepres}}
 
 %----------------------------------------------------------------------------------------
 %	Models 
@@ -226,8 +226,8 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 %	Results
 %----------------------------------------------------------------------------------------
 
-\section{Results}
-\subsection{Introduction}
+\section*{Results}
+\subsection*{Precision indicators}
 To calculate the correctness of the prediction two indicators are used:
 \begin{enumerate}
 \justifying
@@ -236,13 +236,15 @@ To calculate the correctness of the prediction two indicators are used:
 \end{enumerate}
 \vspace{0.5cm}
 
-Depending on the inputs two ways are possible to find the predicted coordinates:\\
+\subsection*{Post-processing}
+Depending on the inputs two ways are possible to find the predicted coordinates:
 \begin{enumerate}
 \justifying
 \item If the coordinates are predicted: directly use them
 \item If the velocities are predicted: $X_{t} = X_{t-1} + V_{t}\cdot 0.4$, with $0.4$ the time between two frames in seconds
 \end{enumerate}
 
+\subsection*{Model tests case}
 Four different cases, that corresponds to four losses, are tested for each model:
 \begin{enumerate}
 \justifying
@@ -251,26 +253,30 @@ Four different cases, that corresponds to four losses, are tested for each model
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
 \end{enumerate}
-\vspace{0.3cm}
-Test set separate in three trajectory types:\\
+\vspace{0.5cm}
+\begin{minipage}[]{0.5\linewidth}
+\subsection*{Trajectory type}
 \begin{enumerate}
 \justifying
 \item Static
 \item Linear trajectories
 \item Non-linear trajectories
 \end{enumerate}
-
-\subsection{Table}
-
-Results with linear prediction:
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+\subsection*{Linear prediction results}
 \begin{itemize}
 \item Type 1: \emph{Mean} = 0.141, \emph{Final} = 0.322
 \item Type 2: \emph{Mean} = 0.541, \emph{Final} = 0.93
 \item Type 3: \emph{Mean} = 0.651, \emph{Final} = 1.457
 \item Total: \emph{Mean} = 0.512, \emph{Final} = 0.982 
 \end{itemize}
-\vspace{1cm}
+\end{minipage}
 
+\vspace{0.5cm}
+
+\subsection*{Models results}
 \begin{center}
 \begin{tabular}{cc|c|c|c|c|c|c|c|c|}
 \cline{3-10}
@@ -286,14 +292,31 @@ Results with linear prediction:
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Losses}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
 \end{tabular}
 \end{center}
+\subsection*{Observation}
+\begin{itemize}
+\item 
+
+\end{itemize}
+
+\section*{Representation}
+
+\begin{minipage}[]{0.5\linewidth}
+Non linear trajectory with good prediction:\\
+\centerline {\includegraphics[width=0.8\textwidth]{figure/fig_1552}}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+Non linear trajectory with bad prediction:\\
+\centerline {\includegraphics[width=0.8\textwidth]{figure/fig_1621}}
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
 
-\section*{Forthcoming Research}
+\section*{Issues \& Future work}
 
-Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis. Maecenas rutrum dui blandit lorem vulputate gravida. Praesent venenatis mi vel lorem tempor at varius diam sagittis. Nam eu leo id turpis interdum luctus a sed augue. Nam tellus.
+Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis.
 
  %----------------------------------------------------------------------------------------
 %	REFERENCES
