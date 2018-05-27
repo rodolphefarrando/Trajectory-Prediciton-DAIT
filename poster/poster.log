@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  27 MAY 2018 15:23
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  27 MAY 2018 15:59
+>>>>>>> 16b464df1766b73f85d6a2ef8f58ccee6d23bbf2
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -514,12 +518,12 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <24.88> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -528,70 +532,80 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figure/socialLSTM.png Graphic file (type png)
 
 <use figure/socialLSTM.png>
-Package pdftex.def Info: figure/socialLSTM.png used on input line 136.
+Package pdftex.def Info: figure/socialLSTM.png used on input line 135.
 (pdftex.def)             Requested size: 225.89732pt x 202.35902pt.
 
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 126--139
-[]$  $[]$ 
+Overfull \hbox (4.72723pt too wide) in paragraph at lines 126--138
+$[]$  $[]$ 
  []
 
 <figure/OurModel.png, id=4, 477.785pt x 404.51125pt>
 File: figure/OurModel.png Graphic file (type png)
  <use figure/OurModel.png>
-Package pdftex.def Info: figure/OurModel.png used on input line 149.
+Package pdftex.def Info: figure/OurModel.png used on input line 148.
 (pdftex.def)             Requested size: 191.11061pt x 161.80162pt.
 
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 140--154
+Overfull \hbox (4.72723pt too wide) in paragraph at lines 139--153
 $[]$  $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 157.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 156.
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
 <figure/afterrot.pdf, id=5, 743.62639pt x 446.51344pt>
 File: figure/afterrot.pdf Graphic file (type pdf)
 
 <use figure/afterrot.pdf>
-Package pdftex.def Info: figure/afterrot.pdf used on input line 170.
-(pdftex.def)             Requested size: 455.80618pt x 273.70137pt.
+Package pdftex.def Info: figure/afterrot.pdf used on input line 171.
+(pdftex.def)             Requested size: 381.33484pt x 228.97928pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 172.
 
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 173--192
-[]$  $[]$ 
- []
-
-<figure/examplepres.pdf, id=6, 728.07077pt x 446.51344pt>
-File: figure/examplepres.pdf Graphic file (type pdf)
-
-<use figure/examplepres.pdf>
-Package pdftex.def Info: figure/examplepres.pdf used on input line 201.
-(pdftex.def)             Requested size: 455.80618pt x 279.54031pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
-
- []
-
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <29.86> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 214.
-<figure/CNN.pdf, id=7, 519.30885pt x 352.4098pt>
-File: figure/CNN.pdf Graphic file (type pdf)
- <use figure/CNN.pdf>
-Package pdftex.def Info: figure/CNN.pdf used on input line 215.
-(pdftex.def)             Requested size: 326.86317pt x 221.82039pt.
-
-<figure/manytomany.png, id=8, 688.5725pt x 642.4pt>
-File: figure/manytomany.png Graphic file (type png)
-
-<use figure/manytomany.png>
-Package pdftex.def Info: figure/manytomany.png used on input line 222.
-(pdftex.def)             Requested size: 326.86317pt x 304.94713pt.
-
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 213--224
+Overfull \hbox (19.72723pt too wide) in paragraph at lines 158--175
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 257--276
+Overfull \hbox (4.72723pt too wide) in paragraph at lines 178--199
+[]$  $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+
+ []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <29.86> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 217.
+<figure/CNN.pdf, id=6, 519.30885pt x 352.4098pt>
+File: figure/CNN.pdf Graphic file (type pdf)
+ <use figure/CNN.pdf>
+Package pdftex.def Info: figure/CNN.pdf used on input line 218.
+(pdftex.def)             Requested size: 326.86317pt x 221.82039pt.
+
+<figure/manytomany.png, id=7, 688.5725pt x 642.4pt>
+File: figure/manytomany.png Graphic file (type png)
+
+<use figure/manytomany.png>
+Package pdftex.def Info: figure/manytomany.png used on input line 225.
+(pdftex.def)             Requested size: 326.86317pt x 304.94713pt.
+
+Overfull \hbox (19.72723pt too wide) in paragraph at lines 216--227
+[]$[]$  $[]$ 
+ []
+
+<figure/hyperparam.pdf, id=8, 752.46747pt x 449.81929pt>
+File: figure/hyperparam.pdf Graphic file (type pdf)
+
+<use figure/hyperparam.pdf>
+Package pdftex.def Info: figure/hyperparam.pdf used on input line 231.
+(pdftex.def)             Requested size: 501.39725pt x 299.73694pt.
+
+Overfull \hbox (4.72723pt too wide) in paragraph at lines 264--283
 $[]$  $[]$ 
  []
 
@@ -599,32 +613,32 @@ $[]$  $[]$
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 309.
-(pdftex.def)             Requested size: 435.8148pt x 263.23523pt.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 316.
+(pdftex.def)             Requested size: 517.52644pt x 312.59923pt.
 
 <figure/fig_1621.pdf, id=10, 709.87082pt x 426.37231pt>
 File: figure/fig_1621.pdf Graphic file (type pdf)
 
 <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 314.
-(pdftex.def)             Requested size: 435.8148pt x 261.77176pt.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 321.
+(pdftex.def)             Requested size: 517.52644pt x 310.86534pt.
 
-Overfull \hbox (4.72723pt too wide) in paragraph at lines 307--316
+Overfull \hbox (4.72723pt too wide) in paragraph at lines 314--323
 $[]$  $[]$ 
  []
 
-No file poster.bbl.
-[1
+(./poster.bbl) [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map} <./figure/epfl_logo.jpg> <./figure/socialLSTM.png> <./figure/Ou
-rModel.png> <./figure/afterrot.pdf> <./figure/examplepres.pdf
+rModel.png> <./figure/afterrot.pdf> <./figure/CNN.pdf> <./figure/manytomany.png
+> <./figure/hyperparam.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figure/examplepres.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
-> <./figure/CNN.pdf> <./figure/manytomany.png> <./figure/fig_1552.pdf
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figure/hyperparam.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+> <./figure/fig_1552.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figure/fig_1552.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
@@ -634,13 +648,13 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figure/fig_1621.pdf): PDF
 inclusion: multiple pdfs with page group included in a single page
 >] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
- 5849 strings out of 493014
- 85906 string characters out of 6133351
- 224851 words of memory out of 5000000
- 9250 multiletter control sequences out of 15000+600000
+ 5858 strings out of 493014
+ 86037 string characters out of 6133351
+ 232817 words of memory out of 5000000
+ 9257 multiletter control sequences out of 15000+600000
  42434 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,39p,362b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,39p,362b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
@@ -651,10 +665,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 1328056 bytes).
+Output written on poster.pdf (1 page, 1342734 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 194 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

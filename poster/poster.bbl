@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{Alahi}
+Ramanathan V. Robicquet A. Fei-Fei~L. Alahi~A., Goel~K. and Savarese S.
+\newblock Social lstm: Human trajectory prediction in crowded spaces.
+\newblock June 2016.
+
+\bibitem{journals/corr/Graves13}
+Alex Graves.
+\newblock Generating sequences with recurrent neural networks.
+\newblock {\em CoRR}, abs/1308.0850, 2013.
+
+\bibitem{Hochreiter:1997:LSM:1246443.1246450}
+Sepp Hochreiter and J\"{u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural Comput.}, 9(8):1735--1780, November 1997.
+
+\end{thebibliography}
