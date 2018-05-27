@@ -122,8 +122,7 @@ a0paper,
 
 \color{DarkSlateGray} % 
 
-\section*{Previous Work}
-Referecnce\\
+\section*{Previous Work \cite{Alahi}}
 \begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
 \justifying
@@ -155,8 +154,8 @@ Referecnce\\
 \section*{Pre-processing}
 
 \textbf{Goal:} Normalize data such that every trajectory begin the same way, the model should learn more easily. \\
-\vspace{1cm}
 
+\begin{minipage}[]{0.5\linewidth}
 The preprocessing is divided in 5 steps:
 \begin{enumerate}
 \item Isolate each trajectory along with its interaction
@@ -165,11 +164,17 @@ The preprocessing is divided in 5 steps:
 \item For each frame, if there is an interacting pedestrian we add his/her coordinates and speed otherwise we add zeros
 \item Data augmentation: flip and add noise to trajectories
 \end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}[]{0.5\linewidth}
+\begin{center}
+\centerline {\includegraphics[width=0.7\textwidth]{figure/afterrot}} 
+\captionof{figure}{Example of one trajectory after pre-processing}
+\end{center}
+\end{minipage}
+
 \vspace{1cm}
 
-\centerline {\includegraphics[width=0.2\textwidth]{figure/afterrot}}
-\captionof{figure}{Example of one trajectory after pre-processing}
-\vspace{3cm}
 Final shape of the data:\\
 \begin{minipage}[]{0.5\linewidth}
 \begin{itemize}
@@ -180,6 +185,7 @@ Final shape of the data:\\
 \end{minipage}
 \hfill
 \begin{minipage}[]{0.5\linewidth}
+\begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
@@ -187,6 +193,7 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
         10     &  i  &  0 &  $y_1$ &  0 &  $V_{y_1}$ \\ \hline
         \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
 \end{tabular}
+\end{center}
 \end{minipage}
 %------------------------------------------------
 
@@ -198,8 +205,6 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 \item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
 \end{itemize}
 
-\centerline {\includegraphics[width=0.2\textwidth]{figure/examplepres}}
-
 %----------------------------------------------------------------------------------------
 %	Models 
 %----------------------------------------------------------------------------------------
@@ -207,8 +212,6 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 \section*{Models}
 \textbf{Inputs:} sequence of coordinates and velocities of the trajectory of interest and of the interacting trajectories\\
 \textbf{Outputs:} sequence of predicted coordinates and velocities for the trajectory of interest.\\
-
-\vspace{1.5cm}
 
 \begin{minipage}[]{0.5\linewidth}
 \subsection*{CNN}
@@ -222,6 +225,11 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 \centerline {\includegraphics[width=0.6\textwidth]{figure/manytomany}}
 \end{minipage}
 
+
+\subsection*{Hyper-parameters test}
+Tests to choose the bests hyper-parameters of the LSTM:\\
+\centerline {\includegraphics[width=0.22\textwidth]{figure/hyperparam}}
+
 %----------------------------------------------------------------------------------------
 %	Results
 %----------------------------------------------------------------------------------------
@@ -234,7 +242,6 @@ To calculate the correctness of the prediction two indicators are used:
 \item The final displacement error: $e_{fin} = \sqrt{(X_{gt,n}-X_{pred,n})^2}$
 \item The mean displacement error: $e_{mean} = \sqrt{\frac{\sum_{i=0}^n(X_{gt,i}-X_{pred,i})^2}{(n)}}$
 \end{enumerate}
-\vspace{0.5cm}
 
 \subsection*{Post-processing}
 Depending on the inputs two ways are possible to find the predicted coordinates:
@@ -306,21 +313,40 @@ Four different cases, that corresponds to four losses, are tested for each model
 
 \begin{minipage}[]{0.5\linewidth}
 Non linear trajectory with good prediction:\\
-\centerline {\includegraphics[width=0.8\textwidth]{figure/fig_1552}}
+\centerline {\includegraphics[width=0.95\textwidth]{figure/fig_1552}}
 \end{minipage}
 \hfill
 \begin{minipage}[]{0.5\linewidth}
 Non linear trajectory with bad prediction:\\
-\centerline {\includegraphics[width=0.8\textwidth]{figure/fig_1621}}
+\centerline {\includegraphics[width=0.95\textwidth]{figure/fig_1621}}
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
 
-\section*{Issues \& Future work}
+\section*{Issues}
 
-Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis.
+\subsection*{Data Augmentation}
+\begin{enumerate}
+\justifying
+\item Flipping trajectories can remove behavioural pattern. If pedestrians tend to deviate on the right (or left) to avoid interaction, this pattern is lost. 
+\item Adding noise doesn't change much the trajectory: two very similar trajectories can be in the train AND in the test set.
+\item So random data choice can create overfitting.
+\end{enumerate}
+\subsection*{Trajnet challenge}
+\begin{enumerate}
+\justifying
+\item Results cannot be entered for the challenge
+\item Small modifications are needed to satisfy the challenge criterion
+\end{enumerate}
+
+\section*{Future work}
+\begin{enumerate}
+\item Test model without normalising step of the preprocessing: see the impact of this step on the learning
+\item Change the way of selecting data to avoid redondance in train, validation and test sets
+\end{enumerate}
+
 
  %----------------------------------------------------------------------------------------
 %	REFERENCES
