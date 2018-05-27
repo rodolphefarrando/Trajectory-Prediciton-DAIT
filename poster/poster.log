@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  27 MAY 2018 15:23
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  27 MAY 2018 15:59
->>>>>>> 16b464df1766b73f85d6a2ef8f58ccee6d23bbf2
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  27 MAY 2018 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -511,13 +507,13 @@ Overfull \hbox (19.72723pt too wide) in paragraph at lines 72--83
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <35.83> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 108.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 113.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 112.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <24.88> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 112.
 LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -665,7 +661,7 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 1342734 bytes).
+Output written on poster.pdf (1 page, 1342997 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
