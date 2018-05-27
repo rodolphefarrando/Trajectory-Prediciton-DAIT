@@ -294,8 +294,12 @@ Four different cases, that corresponds to four losses, are tested for each model
 \end{center}
 \subsection*{Observation}
 \begin{itemize}
-\item 
-
+\justifying
+\item Best results are the same for both models: case with two losses, one for coordinates and the other for velocities
+\item LSTM has much better results than CNN: memory capacities of the cells is useful in sequence to sequence prediction
+\item Three losses model might be too complicated for learning
+\item Good results for type 2 and 3 trajectories but struggle for type 1
+\item Global results is better with linear prediction, but without type 1 LSTM is better
 \end{itemize}
 
 \section*{Representation}
