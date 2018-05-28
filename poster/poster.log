@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  28 MAY 2018 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.28)  28 MAY 2018 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,31 +617,26 @@ Overfull \hbox (21.08003pt too wide) in paragraph at lines 163--179
  []
 
 
-Overfull \hbox (6.08003pt too wide) in paragraph at lines 182--211
-[]$  $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <29.86> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 209.
 <figure/CNN.pdf, id=6, 519.30885pt x 352.4098pt>
 File: figure/CNN.pdf Graphic file (type pdf)
  <use figure/CNN.pdf>
-Package pdftex.def Info: figure/CNN.pdf used on input line 222.
+Package pdftex.def Info: figure/CNN.pdf used on input line 210.
 (pdftex.def)             Requested size: 330.61322pt x 224.36923pt.
 
 <figure/manytomany.png, id=7, 688.5725pt x 642.4pt>
 File: figure/manytomany.png Graphic file (type png)
 
 <use figure/manytomany.png>
-Package pdftex.def Info: figure/manytomany.png used on input line 229.
+Package pdftex.def Info: figure/manytomany.png used on input line 217.
 (pdftex.def)             Requested size: 330.61322pt x 308.44652pt.
 
-Overfull \hbox (21.08003pt too wide) in paragraph at lines 220--231
+Overfull \hbox (21.08003pt too wide) in paragraph at lines 208--219
 []$[]$  $[]$ 
  []
 
@@ -649,10 +644,10 @@ Overfull \hbox (21.08003pt too wide) in paragraph at lines 220--231
 File: figure/hyperparam.pdf Graphic file (type pdf)
 
 <use figure/hyperparam.pdf>
-Package pdftex.def Info: figure/hyperparam.pdf used on input line 235.
+Package pdftex.def Info: figure/hyperparam.pdf used on input line 223.
 (pdftex.def)             Requested size: 569.76643pt x 340.61015pt.
 
-Overfull \hbox (21.08003pt too wide) in paragraph at lines 269--288
+Overfull \hbox (21.08003pt too wide) in paragraph at lines 257--276
 []$[]$  $[]$ 
  []
 
@@ -660,14 +655,14 @@ Overfull \hbox (21.08003pt too wide) in paragraph at lines 269--288
 File: figure/fig_1552.pdf Graphic file (type pdf)
 
 <use figure/fig_1552.pdf>
-Package pdftex.def Info: figure/fig_1552.pdf used on input line 319.
+Package pdftex.def Info: figure/fig_1552.pdf used on input line 307.
 (pdftex.def)             Requested size: 518.22417pt x 313.01962pt.
 
 <figure/fig_1621.pdf, id=10, 709.87082pt x 426.37231pt>
 File: figure/fig_1621.pdf Graphic file (type pdf)
 
 <use figure/fig_1621.pdf>
-Package pdftex.def Info: figure/fig_1621.pdf used on input line 324.
+Package pdftex.def Info: figure/fig_1621.pdf used on input line 312.
 (pdftex.def)             Requested size: 518.22417pt x 311.28172pt.
  (./poster.bbl) [1
 
@@ -697,11 +692,11 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  6125 strings out of 493014
  89419 string characters out of 6133351
- 235713 words of memory out of 5000000
+ 231713 words of memory out of 5000000
  9522 multiletter control sequences out of 15000+600000
  41575 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,38p,359b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,38p,359b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
@@ -711,7 +706,7 @@ e/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 1334766 bytes).
+Output written on poster.pdf (1 page, 1334339 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream

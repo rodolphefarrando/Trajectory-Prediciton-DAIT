@@ -131,8 +131,8 @@ a0paper,
 \begin{minipage}[]{0.6\linewidth}
 \begin{itemize}
 \justifying
-\item The prediction are done per frame: the goal is to determine multiple trajectory at the same time
-\item Introduction of a social pooling characteristics: if two pedestrian are side-by-side, they are grouped together
+\item The prediction are done per frame: the goal is to determine multiple trajectories at the same time
+\item Introduction of a social pooling characteristic: if two pedestrians are side-by-side, they are grouped together
 \end{itemize}
 \end{minipage}
 \hfill
@@ -140,7 +140,7 @@ a0paper,
 \centerline {\includegraphics[scale = 0.35]{figure/socialLSTM}}
 \end{minipage}
 %
-\section*{Idea for our Models}
+\section*{Ideas for our Models}
 \begin{minipage}[]{0.6\linewidth}
 \begin{itemize}
 \justifying
@@ -158,7 +158,7 @@ a0paper,
 
 \section*{Pre-processing}
 
-\textbf{Goal:} Normalize data such that every trajectory begin the same way, the model should learn more easily. \\
+\textbf{Goal:} Normalize data such that every trajectory has the same first direction: the model should learn more easily. \\
 
 \begin{minipage}[]{0.5\linewidth}
 The preprocessing is divided in 5 steps:
@@ -166,7 +166,7 @@ The preprocessing is divided in 5 steps:
 \item Isolate each trajectory along with its interaction
 \item Normalize the trajectories: the first point is at $(0,0)$; the second is at $(0,y_1)$
 \item Calculate axis velocities $V_x$ and $V_y$
-\item For each frame, if there is an interacting pedestrian we add his/her coordinates and speed otherwise we add zeros
+\item For each frame, if there is an interacting pedestrian: add his/her coordinates and velocities, otherwise add zeros
 \item Data augmentation: flip and add noise to trajectories
 \end{enumerate}
 \end{minipage}
@@ -179,35 +179,23 @@ The preprocessing is divided in 5 steps:
 
 \vspace{1cm}
 
-Final shape of the data:\\
-\begin{minipage}[]{0.6\linewidth}
+\begin{minipage}[]{0.48\linewidth}
+\textbf{Final shape of the data:}
 \begin{itemize}
 \item Pedestrians ID
 \item Frame number 
-\item Twenty sets of $x$ and $y$ coordinates per pedestrian
+\item Twenty sets of $x$ and $y$ coordinates and velocities per pedestrian
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[]{0.4\linewidth}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
-        0     &  i  &  0 &  0 &  0 &  0 \\ \hline
-        10     &  i  &  0 &  $y_1$ &  0 &  $V_{y_1}$ \\ \hline
-        \vdots     &  \vdots &  \vdots & \vdots &  \vdots &  \vdots \\ \hline
-\end{tabular}
-\end{center}
+\begin{minipage}[]{0.48\linewidth}
+\textbf{Objectives:}
+\begin{itemize}
+\item Train on the ten first coordinates and speed and their interaction
+\item Predict the next ten
+\end{itemize}
+\vspace{1cm}
 \end{minipage}
-%------------------------------------------------
-%
-%\section*{Objectives}
-%
-%\begin{itemize}
-%\item Train on the 10 first coordinates and speed and their interaction
-%\item Predict the next 10 
-%\item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
-%\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	Models 
@@ -296,13 +284,13 @@ Four different cases, that corresponds to four losses, are tested for each model
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Coord.}}} & \textbf{Final} &10.246                 & 7.009                &10.501                 &5.602                & 1.385           & 0.92           & 1.108           & 1.037                                \\ \hline
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.567                 &5.133                 &1.911                 &4.17                & 0.726           & 0.573           & 0.651           & 0.616 \\ \cline{2-10} 
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Speed}}} & \textbf{Final} &0.77                 &6.971                 &3.882                 &5.587                & 1.412           & 1.045           & 1.231           & 1.148 \\ \hline
-\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &1.269      &5.134                 &1.762                 &{\color[HTML]{FE0000} \textbf{4.163}}                & 0.695           & 0.532           & 0.627           &  {\color[HTML]{FE0000} \textbf{0.581}}                                 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Losses}}} & \textbf{Final} &2.727                 &6.978                 &3.546                 &{\color[HTML]{FE0000} \textbf{5.57}}                & 1.302           & 0.963           & 1.2           &  {\color[HTML]{FE0000} \textbf{1.076}}                                 \\ \hline
+\multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &1.269      &5.134                 &1.762                 &{\color[HTML]{3166FF} \textbf{4.163}}                & 0.695           & 0.532           & 0.627           &  {\color[HTML]{3166FF} \textbf{0.581}}                                 \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{2 Losses}}} & \textbf{Final} &2.727                 &6.978                 &3.546                 &{\color[HTML]{3166FF} \textbf{5.57}}                & 1.302           & 0.963           & 1.2           &  {\color[HTML]{3166FF} \textbf{1.076}}                                 \\ \hline
 \multicolumn{1}{|c|}{}                                   & \textbf{Mean}  &0.549                 &5.135                 &3.829                 &4.163                & 0.748           & 0.607           & 0.681           & 0.647                                  \\ \cline{2-10} 
 \multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{3 Losses}}} & \textbf{Final} &0.758                 &6.983                 &4.962                 &5.573                & 1.364           & 1.072            & 1.308           & 1.177                                  \\ \hline
 \end{tabular}
 \end{center}
-\subsection*{Observation}
+\subsection*{Observations}
 \begin{itemize}
 \justifying
 \item Best results are the same for both models: case with two losses, one for coordinates and the other for velocities
