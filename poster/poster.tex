@@ -27,13 +27,18 @@
 a0paper,
  left=20mm,
  right=20mm,
- top=20mm,
- bottom = 20mm
+ top=10mm,
+ bottom = 10mm
  }
 
+\usepackage{titlesec}
+\titlespacing*{\section}
+  {0pt}{1\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsection}
+  {0pt}{0.75\baselineskip}{0.5\baselineskip}
 
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
-\columnsep=100pt % This is the amount of white space between the columns in the poster
+\columnsep=75pt % This is the amount of white space between the columns in the poster
 \columnseprule=3pt % This is the thickness of the black line between the columns in the poster
 
 \usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
@@ -58,8 +63,10 @@ a0paper,
 
 
 
-\begin{document}
 
+\begin{document}
+ \fontsize{32} {34}
+ \selectfont
 %----------------------------------------------------------------------------------------
 %	POSTER HEADER 
 %----------------------------------------------------------------------------------------
@@ -82,7 +89,7 @@ a0paper,
 \includegraphics[width=20cm]{./figure/epfl_logo.jpg}\\
 \end{minipage}
 
-\vspace{1cm} % A bit of extra whitespace between the header and poster content
+%\vspace{1cm} % A bit of extra whitespace between the header and poster content
 
 %----------------------------------------------------------------------------------------
 
@@ -120,11 +127,8 @@ a0paper,
 %----------------------------------------------------------------------------------------
 %	PREVIOUS WORK	
 %----------------------------------------------------------------------------------------
-
-\color{DarkSlateGray} % 
-
 \section*{Previous Work \cite{Alahi}}
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.6\linewidth}
 \begin{itemize}
 \justifying
 \item The prediction are done per frame: the goal is to determine multiple trajectory at the same time
@@ -132,12 +136,12 @@ a0paper,
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.4\linewidth}
 \centerline {\includegraphics[scale = 0.35]{figure/socialLSTM}}
 \end{minipage}
 %
 \section*{Idea for our Models}
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.6\linewidth}
 \begin{itemize}
 \justifying
 \item Instead of focusing on frames, prediction focus on one pedestrian
@@ -145,7 +149,7 @@ a0paper,
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.4\linewidth}
 \centerline {\includegraphics[scale = 0.4]{figure/OurModel}}
 \end{minipage}
 %----------------------------------------------------------------------------------------
@@ -169,15 +173,14 @@ The preprocessing is divided in 5 steps:
 \hfill
 \begin{minipage}[]{0.5\linewidth}
 \begin{center}
-\centerline {\includegraphics[width=0.7\textwidth]{figure/afterrot}} 
-\captionof{figure}{Example of one trajectory after pre-processing}
+\centerline {\includegraphics[width=0.95\textwidth]{figure/afterrot}} 
 \end{center}
 \end{minipage}
 
 \vspace{1cm}
 
 Final shape of the data:\\
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.6\linewidth}
 \begin{itemize}
 \item Pedestrians ID
 \item Frame number 
@@ -185,7 +188,7 @@ Final shape of the data:\\
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.4\linewidth}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
@@ -197,14 +200,14 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 \end{center}
 \end{minipage}
 %------------------------------------------------
-
-\section*{Objectives}
-
-\begin{itemize}
-\item Train on the 10 first coordinates and speed and their interaction
-\item Predict the next 10 
-\item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
-\end{itemize}
+%
+%\section*{Objectives}
+%
+%\begin{itemize}
+%\item Train on the 10 first coordinates and speed and their interaction
+%\item Predict the next 10 
+%\item Inputs have the following shape: $[10,N,4 * N_{inter}]$ 
+%\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	Models 
@@ -229,7 +232,7 @@ Frame Number & ID & $x$ & $y$ & $ V_x$ & $V_y$ \\ \hline
 
 \subsection*{Hyper-parameters test}
 Tests to choose the bests hyper-parameters of the LSTM:\\
-\centerline {\includegraphics[width=0.22\textwidth]{figure/hyperparam}}
+\centerline {\includegraphics[width=0.25\textwidth]{figure/hyperparam}}
 
 %----------------------------------------------------------------------------------------
 %	Results
@@ -261,7 +264,8 @@ Four different cases, that corresponds to four losses, are tested for each model
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2$
 \item Predict both coordinates and speeds with loss defines as $L = L_1 + L_2 + L_3 $, with $L_3 = (X- X_{t-1} + V_t*0.4)^2$
 \end{enumerate}
-\vspace{0.5cm}
+
+
 \begin{minipage}[]{0.5\linewidth}
 \subsection*{Trajectory type}
 \begin{enumerate}
@@ -281,8 +285,6 @@ Four different cases, that corresponds to four losses, are tested for each model
 \item Total: \emph{Mean} = 0.512, \emph{Final} = 0.982 
 \end{itemize}
 \end{minipage}
-
-\vspace{0.5cm}
 
 \subsection*{Models results}
 \begin{center}
@@ -312,12 +314,12 @@ Four different cases, that corresponds to four losses, are tested for each model
 
 \section*{Representation}
 
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.495\linewidth}
 Non linear trajectory with good prediction:\\
 \centerline {\includegraphics[width=0.95\textwidth]{figure/fig_1552}}
 \end{minipage}
 \hfill
-\begin{minipage}[]{0.5\linewidth}
+\begin{minipage}[]{0.495\linewidth}
 Non linear trajectory with bad prediction:\\
 \centerline {\includegraphics[width=0.95\textwidth]{figure/fig_1621}}
 \end{minipage}
@@ -335,12 +337,12 @@ Non linear trajectory with bad prediction:\\
 \item Adding noise doesn't change much the trajectory: two very similar trajectories can be in the train AND in the test set.
 \item Random data choice can create overfitting.
 \end{enumerate}
-\subsection*{Trajnet challenge}
-\begin{enumerate}
-\justifying
-\item Results cannot be entered for the challenge
-\item Small modifications are needed to satisfy the challenge criterion
-\end{enumerate}
+%\subsection*{Trajnet challenge}
+%\begin{enumerate}
+%\justifying
+%\item Results cannot be entered for the challenge
+%\item Small modifications are needed to satisfy the challenge criterion
+%\end{enumerate}
 
 \section*{Future work}
 \begin{enumerate}
